@@ -223,10 +223,10 @@ const StartupJunctionForm: React.FC = () => {
                 <div className="border border-gray-700 rounded-xl p-8 bg-black/30 text-center">
                     <h2 className="text-xl font-semibold text-white">Registration received</h2>
                     <p className="text-gray-300 mt-2">
-                        You’ve registered {ticketCount} ticket{ticketCount > 1 ? "s" : ""} for Startup Junction.
+                        {"You've registered"} {ticketCount} ticket{ticketCount > 1 ? "s" : ""} for Startup Junction.
                     </p>
                     <p className="text-gray-400 mt-1">Event: {eventLabel}</p>
-                    <p className="text-gray-400 mt-1">we'll contact you soon.</p>
+                    <p className="text-gray-400 mt-1">We will contact you soon.</p>
                     <div className="mt-6">
                         <button
                             type="button"

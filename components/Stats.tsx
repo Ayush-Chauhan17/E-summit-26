@@ -26,27 +26,35 @@ const StatItem: FunctionComponent<Stat & { isFirstItem: boolean }> = ({
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const numericValue = parseInt(value.replace(/\D/g, ""));
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          const controls = animate(count, numericValue, {
+          // Animate the motion value to the target number once when visible
+          animate(count, numericValue, {
             duration: 2,
             ease: "easeOut",
           });
-          return controls.stop;
+          // stop observing after animation starts to avoid repeated triggers
+          observer.unobserve(node);
         }
       },
       { threshold: 0.1 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(node);
+
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      // use the captured node reference to avoid ref.current changes during cleanup
+      if (node) observer.unobserve(node);
+      observer.disconnect();
     };
-  }, []);
+  }, [count, numericValue]);
 
   return (
     <Tilt>
