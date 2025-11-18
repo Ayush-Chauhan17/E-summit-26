@@ -10,6 +10,7 @@ export const runtime = "nodejs";
 // - startup_name: string
 // - phone: string
 // - ticket_count: number
+// - city: string (e.g. Bangalore/Ahmedabad/Delhi)
 // - attachment: File (optional)
 
 const BUCKET = "startup-junction";
@@ -22,12 +23,13 @@ export async function POST(request: Request) {
         const email = String(formData.get("email") || "").trim();
         const startup_name = String(formData.get("startup_name") || "").trim();
         const phone = String(formData.get("phone") || "").trim();
+        const city = String(formData.get("city") || "").trim();
         const ticket_count_raw = String(formData.get("ticket_count") || "0").trim();
         const attachment = formData.get("attachment") as File | null;
 
         const ticket_count = Number.parseInt(ticket_count_raw, 10);
 
-        if (!name || !email || !startup_name || !phone || !Number.isFinite(ticket_count) || ticket_count < 1) {
+        if (!name || !email || !startup_name || !phone || !city || !Number.isFinite(ticket_count) || ticket_count < 1) {
             return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
         }
 
@@ -59,6 +61,7 @@ export async function POST(request: Request) {
             email,
             startup_name,
             phone,
+            city,
             ticket_count,
             attachment_path,
             event_key,

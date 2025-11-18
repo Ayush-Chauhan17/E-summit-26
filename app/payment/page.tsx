@@ -54,6 +54,7 @@ const StartupJunctionForm: React.FC = () => {
     const [startupName, setStartupName] = useState("");
     const [phone, setPhone] = useState("");
     const [file, setFile] = useState<File | null>(null);
+    const [city, setCity] = useState<string>("");
     const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -69,6 +70,7 @@ const StartupJunctionForm: React.FC = () => {
             form.append("email", email.trim());
             form.append("startup_name", startupName.trim());
             form.append("phone", phone.trim());
+            form.append("city", city.trim());
             form.append("ticket_count", String(ticketCount));
             if (file) form.append("attachment", file);
 
@@ -191,6 +193,21 @@ const StartupJunctionForm: React.FC = () => {
                             />
                         </div>
                         <div>
+                            <label className="block text-sm text-gray-300 mb-1">City</label>
+                            <select
+                                value={city}
+                                onChange={(e) => setCity(e.target.value)}
+                                className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            >
+                                <option value="" disabled>
+                                    Select city
+                                </option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Delhi">Delhi</option>
+                            </select>
+                        </div>
+                        <div>
                             <label className="block text-sm text-gray-300 mb-1">Attachment (optional)</label>
                             <input
                                 type="file"
@@ -209,7 +226,7 @@ const StartupJunctionForm: React.FC = () => {
                         <button
                             type="button"
                             onClick={onSubmit}
-                            disabled={submitting || !name || !email || !startupName || !phone}
+                            disabled={submitting || !name || !email || !startupName || !phone || !city}
                             className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-60"
                         >
                             {submitting ? "Submitting…" : "Submit"}

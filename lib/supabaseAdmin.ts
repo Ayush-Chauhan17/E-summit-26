@@ -30,5 +30,6 @@ export type StartupJunctionRegistration = {
     phone: string;
     ticket_count: number;
     attachment_path?: string | null;
+    city?: string | null;
     event_key: string; // e.g., 'startup_junction_2025_12_06_1500_ist'
 };
