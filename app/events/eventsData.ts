@@ -7,32 +7,32 @@ export const startupEvents = [
   //   isOdd: false,
   //   eventPage: "/events/startup-expo",
   // },
-  {
-    title: "Xpanse",
-    description:
-      "Xpanse is an exciting business planning competition where innovative teams present their startup ideas' comprehensive business plans. Dive into a world of entrepreneurship, strategy, and creativity, as participants pitch their visions to seasoned judges, vying for recognition and support.",
-    imageUrl: "/images/Xpanseicon_25.png",
-    isOdd: false,
-    eventPage:
-      "https://unstop.com/competitions/xpanse-the-b-plan-competition-e-summit25-iit-bhu-1253625",
-  },
-  {
-    title: "Million Dollar Pitch",
-    description:
-      " Million Dollar Pitch is a gateway for startups to secure the funding they deserve. With a rigorous 3-round screening process, it culminates in a Demo Day where the top teams showcase their visionary ideas to a distinguished panel of VCs and Angel Investors.",
-    imageUrl: "/images/milliondollarpitchicon_new.png",
-    isOdd: false,
-    eventPage:
-      "https://unstop.com/competitions/million-dollar-pitch-e-summit25-iit-bhu-1253399",
-  },
+  // {
+  //   title: "Xpanse",
+  //   description:
+  //     "Xpanse is an exciting business planning competition where innovative teams present their startup ideas' comprehensive business plans. Dive into a world of entrepreneurship, strategy, and creativity, as participants pitch their visions to seasoned judges, vying for recognition and support.",
+  //   imageUrl: "/images/Xpanseicon_25.png",
+  //   isOdd: false,
+  //   eventPage:
+  //     "https://unstop.com/competitions/xpanse-the-b-plan-competition-e-summit25-iit-bhu-1253625",
+  // },
+  // {
+  //   title: "Million Dollar Pitch",
+  //   description:
+  //     " Million Dollar Pitch is a gateway for startups to secure the funding they deserve. With a rigorous 3-round screening process, it culminates in a Demo Day where the top teams showcase their visionary ideas to a distinguished panel of VCs and Angel Investors.",
+  //   imageUrl: "/images/milliondollarpitchicon_new.png",
+  //   isOdd: false,
+  //   eventPage:
+  //     "https://unstop.com/competitions/million-dollar-pitch-e-summit25-iit-bhu-1253399",
+  // },
   {
     title: "The Founder's Gambit",
     description:
       " Founder’s Gambit will help you experience the hurdles faced by Startup founders in their career while you take decisions which can decide the course and future of your Startup. Participants will navigate a simulated startup journey, solving problems across eight stages of a startup’s lifecycle.",
-    imageUrl: "/images/thefounder'sgambiticon_25.png",
+    imageUrl: "/images/tfgIllus.png",
     isOdd: false,
     eventPage:
-      "https://unstop.com/competitions/the-founders-gambit-e-summit25-indian-institute-of-technology-banaras-hindu-university-varanasi-1253604",
+      "https://unstop.com/competitions/fusionforge-e-summit26-iit-bhu-varanasi-iit-bhu-1592113",
   },
 ];
 export const stategyEvents = [
@@ -49,66 +49,93 @@ export const stategyEvents = [
     title: "Case X",
     description:
       "CaseX is a dynamic case study competition challenging teams to tackle real-world startup issues. The participants dive into the entrepreneurial world as they receive a problem statement and craft innovative strategies and solutions.",
-    imageUrl: "/images/Casexicon_25.png",
+    imageUrl: "/images/casexIllustration.png",
     isOdd: false,
-    eventPage: "https://unstop.com/competitions/casex-e-summit25-iit-bhu-1253287",
+    eventPage: "https://unstop.com/o/wVsmRrg?lb=orhiPzt&utm_medium=Share&utm_source=eventcel20660&utm_campaign=Competitions",
   },
   {
     title: "Design Rush",
     description:
       "Design Rush is the ultimate UI/UX competition, where teams take on real challenges provided by startups. The participants craft wireframes, prototypes, and dynamic solutions as they get to showcase their design prowess and help startups navigate the digital landscape in this thrilling competition.",
-    imageUrl: "/images/designrushicon_new.png",
+    imageUrl: "/images/design-rushIllus.png",
     isOdd: false,
     eventPage:
-      "https://unstop.com/competitions/design-rush-e-summit25-iit-bhu-1252946",
+      "https://unstop.com/competitions/design-rush-e-summit26-iit-bhu-varanasi-iit-bhu-1592178",
   },
   {
     title: "Venture Verse",
     description:
       "Venture Verse is a thrilling competition that puts you in the shoes of a VC associate. Participants dive into the world of venture capital as they analyse startups and assess their investment potential. Discover the next big thing and sharpen your skills in this high-stakes VC competition.",
-    imageUrl: "/images/ventureverseicon_25.png",
+    imageUrl: "/images/venture-verseILLU.png",
     isOdd: false,
     eventPage:
-      "https://unstop.com/competitions/venture-verse-e-summit25-iit-bhu-1253376",
+      "https://unstop.com/competitions/venture-verse-e-summit26-iit-bhu-varanasi-iit-bhu-1592159",
   },
   {
     title: "AdVenture",
     description:
       "AdVenture: The Branding Challenge is a one-of-a-kind event which gives you the opportunity to showcase your innovative ideas, out-of-the-box strategies, and unique approach to marketing in a competitive yet collaborative environment.",
-    imageUrl: "/images/adventureicon_new.png",
+    imageUrl: "/images/AdventureIllus.png",
     isOdd: false,
     eventPage:
-      "https://unstop.com/competitions/adventure-the-branding-challenge-e-summit25-iit-bhu-1253461",
+      "https://unstop.com/competitions/adventure-the-branding-challenge-e-summit26-iit-bhu-varanasi-iit-bhu-1592119",
+  },
+  {
+    title: "Fusion Forge",
+    description:
+      "Every team will have to think of a hybrid product and propose a 2-slide plan for their product, including their purpose, price, promotion(tagline, product name, etc), and target audience.",
+    imageUrl: "/images/fusionforgeIllus.png",
+    isOdd: false,
+    eventPage:
+      "https://unstop.com/competitions/fusion-forge-e-summit26-iit-bhu-varanasi-iit-bhu-1592945",
+  },
+  {
+    title: "Verdict Arena",
+    description:
+      "The Verdict Arena merges entrepreneurship, global laws, and strategic reasoning. Participants step into the shoes of founders navigating complex international legal systems — learning how regulations can both empower and challenge startups. Through multiple rounds, they will test their business intellect, legal awareness, and persuasive skills in real-world startup scenarios.",
+    imageUrl: "/images/the-verdict-arenaILLU.png",
+    isOdd: false,
+    eventPage:
+      "https://unstop.com/competitions/the-verdict-arena-e-summit26-iit-bhu-varanasi-iit-bhu-1592122",
   },
 ];
 export const funEvents = [
+  {
+    title: "Tesseract",
+    description:
+      "Tesseract, a captivating treasure hunt, is a highlight of E-Summit '23. Join us on an exhilarating adventure where innovation and entrepreneurship intersect with clues and challenges. Uncover hidden gems, forge connections, and experience the heart of entrepreneurial exploration at this year's E-Summit.",
+    imageUrl: "/images/TesseractIllu.png",
+    isOdd: false,
+    eventPage:
+      "",
+  },
   // {
-  //   title: "Tesseract",
+  //   title: "Entrivia",
   //   description:
-  //     "Tesseract, a captivating treasure hunt, is a highlight of E-Summit '23. Join us on an exhilarating adventure where innovation and entrepreneurship intersect with clues and challenges. Uncover hidden gems, forge connections, and experience the heart of entrepreneurial exploration at this year's E-Summit.",
-  //   imageUrl: "/images/tesseracticon_new.png",
+  //     "The ultimate quiz competition for entrepreneurial minds. Test your knowledge of startups, innovation, and business strategy in a challenging and engaging format. Join us to celebrate the entrepreneurial spirit and showcase your expertise in this exciting venture.",
+  //   imageUrl: "/images/entriviaicon_25.png",
   //   isOdd: false,
   //   eventPage:
-  //     "https://unstop.com/competitions/tesseract-a-murder-mystery-hunt-e-summit24-iit-bhu-varanasi-831263",
+  //     "https://unstop.com/quiz/entrivia-e-summit25-iit-bhu-1253155",
   // },
-  {
-    title: "Entrivia",
+    {
+    title: "ShipWreck",
     description:
-      "The ultimate quiz competition for entrepreneurial minds. Test your knowledge of startups, innovation, and business strategy in a challenging and engaging format. Join us to celebrate the entrepreneurial spirit and showcase your expertise in this exciting venture.",
-    imageUrl: "/images/entriviaicon_25.png",
+      "Shipwreck is a fast-paced showdown where participants step into the shoes of CEOs, entrepreneurs, and startup prodigies to talk, think, and strategize their way to the top. Five contestants battle through sharp arguments, clever pitches, and persuasive answers to impress the Captain and survive each round. Drama, wit, and innovation collide—only one visionary will rise as the ultimate winner.",
+    imageUrl: "/images/shipwreckIllus.png",
     isOdd: false,
     eventPage:
-      "https://unstop.com/quiz/entrivia-e-summit25-iit-bhu-1253155",
+      "https://unstop.com/events/shipwreck-e-summit26-iit-bhu-varanasi-iit-bhu-1592794?utm_medium=Share&utm_source=logged_out_user&utm_campaign=Cultural",
   },
-  {
-    title: "Bid Bonanza",
-    description:
-      "BidBonanza is where entrepreneurial dreams take center stage. Teams bid and compete for the finest startup profiles, curating their portfolios with potential gems. Join this high-stakes event that mirrors the dynamics of venture capital, as you strategize and invest in the future of innovation.",
-    imageUrl: "/images/bidbonanzaicon_25.png",
-    isOdd: false,
-    eventPage:
-      "https://unstop.com/competitions/bid-bonanza-e-summit25-iit-bhu-1253353",
-  },
+  // {
+  //   title: "Bid Bonanza",
+  //   description:
+  //     "BidBonanza is where entrepreneurial dreams take center stage. Teams bid and compete for the finest startup profiles, curating their portfolios with potential gems. Join this high-stakes event that mirrors the dynamics of venture capital, as you strategize and invest in the future of innovation.",
+  //   imageUrl: "/images/bidbonanzaicon_25.png",
+  //   isOdd: false,
+  //   eventPage:
+  //     "https://unstop.com/competitions/bid-bonanza-e-summit25-iit-bhu-1253353",
+  // },
 ];
 // export const schoolEvents = [
 //   {
