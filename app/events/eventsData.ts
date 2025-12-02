@@ -23,7 +23,7 @@ export const startupEvents = [
     imageUrl: "/images/MDPillu.png",
     isOdd: false,
     eventPage:
-      "https://unstop.com/competitions/million-dollar-pitch-e-summit25-iit-bhu-1253399",
+      "https://unstop.com/competitions/million-dollar-pitch-e-summit26-iit-bhu-varanasi-iit-bhu-1603797",
   },
   {
     title: "The Founder's Gambit",
