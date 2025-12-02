@@ -16,15 +16,15 @@ export const startupEvents = [
   //   eventPage:
   //     "https://unstop.com/competitions/xpanse-the-b-plan-competition-e-summit25-iit-bhu-1253625",
   // },
-  // {
-  //   title: "Million Dollar Pitch",
-  //   description:
-  //     " Million Dollar Pitch is a gateway for startups to secure the funding they deserve. With a rigorous 3-round screening process, it culminates in a Demo Day where the top teams showcase their visionary ideas to a distinguished panel of VCs and Angel Investors.",
-  //   imageUrl: "/images/milliondollarpitchicon_new.png",
-  //   isOdd: false,
-  //   eventPage:
-  //     "https://unstop.com/competitions/million-dollar-pitch-e-summit25-iit-bhu-1253399",
-  // },
+  {
+    title: "Million Dollar Pitch",
+    description:
+      " Million Dollar Pitch is a gateway for startups to secure the funding they deserve. With a rigorous 3-round screening process, it culminates in a Demo Day where the top teams showcase their visionary ideas to a distinguished panel of VCs and Angel Investors.",
+    imageUrl: "/images/MDPillu.png",
+    isOdd: false,
+    eventPage:
+      "https://unstop.com/competitions/million-dollar-pitch-e-summit25-iit-bhu-1253399",
+  },
   {
     title: "The Founder's Gambit",
     description:
