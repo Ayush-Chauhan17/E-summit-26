@@ -11,6 +11,7 @@ import React from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Head from "next/head";
 // const inter = Inter({ subsets: ["latin"] });
+// import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   applicationName: "E-Summit'25 | IIT BHU Varanasi",

@@ -1,8 +1,10 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import styles from "./sponsor_card.module.css";
 import SvgDefs from "./svg_defs";
+
 import inflection from "../../public/carousel/Inflection-removebg-preview.png";
 import hundred from "../../public/carousel/100x-removebg-preview.png";
 import antler from "../../public/carousel/Antler-removebg-preview.png";
@@ -37,101 +39,49 @@ import se from "../../public/carousel/safe.png";
 import gfg from "../../public/carousel/gfg.png";
 import go from "../../public/carousel/grabon.png";
 
-import { X } from "lucide-react";
+const SPONSORS = [
+  inflection, hundred, antler, axilor, faad, forty, fibonacci, fluid,
+  kae, launch, lets, pedal, sooni, west, xscale, yours, gs, aws,
+  amul, digital, zee, unstop, jag, micro, redbus, un, zoho,
+  fresh, icici, bob, se, gfg, go
+];
 
-const MarqueeComponent: React.FC = () => {
+const MarqueeGroup = () => (
+  <div className={styles.marquee__group}>
+    {SPONSORS.map((img, index) => (
+      <Image
+        key={index}
+        src={img}
+        alt="Sponsor Logo"
+        height={140}
+        width={200}
+        className={styles.cardh}
+      />
+    ))}
+  </div>
+);
+
+const MarqueeComponent = () => {
   return (
-    <div className={`${styles.root} dark`}>
-      <div className="mb-12 text-center relative z-20">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 break-words">
-          <span
-            style={{
-              background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Previous Sponsors
-          </span>
-
-        </h2>
-      </div>
+    <div className={styles.root}>
+      <h2 className="text-center text-4xl md:text-5xl font-bold text-white mb-10">
+        <span
+          style={{
+            background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Previous Sponsors
+        </span>
+      </h2>
 
       <div className={styles.wrapper}>
         <SvgDefs />
 
         <div className={styles.marquee}>
-          <div className={styles.marquee__group}>
-            <Image src={inflection} alt="" height={200} width={200} />
-            <Image src={hundred} alt="" height={200} width={200} />
-            <Image src={antler} alt="" height={200} width={200} />
-            <Image src={axilor} alt="" height={200} width={200} />
-            <Image src={faad} alt="" height={200} width={200} />
-            <Image src={forty} alt="" height={200} width={200} />
-            <Image src={fibonacci} alt="" height={200} width={200} />
-            <Image src={fluid} alt="" height={200} width={200} />
-            <Image src={kae} alt="" className={styles.cardh} />
-            <Image src={launch} alt="" height={200} width={200} />
-            <Image src={lets} alt="" height={200} width={200} />
-            <Image src={pedal} alt="" height={200} width={200} />
-            <Image src={sooni} alt="" className={styles.cardh} />
-            <Image src={west} alt="" height={200} width={200} />
-            <Image src={xscale} alt="" height={200} width={200} />
-            <Image src={yours} alt="" height={200} width={200} />
-            <Image src={gs} alt="" height={200} width={200} />
-            <Image src={aws} alt="" height={200} width={200} />
-            <Image src={amul} alt="" className={styles.cardh} />
-            <Image src={digital} alt="" className={styles.cardh} />
-            <Image src={zee} alt="" className={styles.cardh} />
-            <Image src={unstop} alt="" height={200} width={200} />
-            <Image src={jag} alt="" height={200} width={200} />
-            <Image src={micro} alt="" height={200} width={200} />
-            <Image src={redbus} alt="" className={styles.cardh} />
-            <Image src={un} alt="" height={200} width={200} />
-            <Image src={zoho} alt="" height={200} width={200} />
-            <Image src={fresh} alt="" height={200} width={200} />
-            <Image src={icici} alt="" className={styles.cardh} />
-            <Image src={bob} alt="" className={styles.cardh} />
-            <Image src={se} alt="" height={200} width={200} />
-            <Image src={gfg} alt="" className={styles.cardh} />
-            <Image src={go} alt="" height={200} width={200} />
-          </div>
-
-          <div aria-hidden="true" className={styles.marquee__group}>
-            <Image src={inflection} alt="" height={200} width={200} />
-            <Image src={hundred} alt="" height={200} width={200} />
-            <Image src={antler} alt="" height={200} width={200} />
-            <Image src={axilor} alt="" height={200} width={200} />
-            <Image src={faad} alt="" height={200} width={200} />
-            <Image src={forty} alt="" height={200} width={200} />
-            <Image src={fibonacci} alt="" height={200} width={200} />
-            <Image src={fluid} alt="" height={200} width={200} />
-            <Image src={kae} alt="" className={styles.cardh} />
-            <Image src={launch} alt="" height={200} width={200} />
-            <Image src={lets} alt="" height={200} width={200} />
-            <Image src={pedal} alt="" height={200} width={200} />
-            <Image src={sooni} alt="" className={styles.cardh} />
-            <Image src={west} alt="" height={200} width={200} />
-            <Image src={xscale} alt="" height={200} width={200} />
-            <Image src={yours} alt="" height={200} width={200} />
-            <Image src={gs} alt="" height={200} width={200} />
-            <Image src={aws} alt="" height={200} width={200} />
-            <Image src={amul} alt="" className={styles.cardh} />
-            <Image src={digital} alt="" className={styles.cardh} />
-            <Image src={zee} alt="" className={styles.cardh} />
-            <Image src={unstop} alt="" height={200} width={200} />
-            <Image src={jag} alt="" height={200} width={200} />
-            <Image src={micro} alt="" height={200} width={200} />
-            <Image src={redbus} alt="" className={styles.cardh} />
-            <Image src={un} alt="" height={200} width={200} />
-            <Image src={zoho} alt="" height={200} width={200} />
-            <Image src={fresh} alt="" height={200} width={200} />
-            <Image src={icici} alt="" className={styles.cardh} />
-            <Image src={bob} alt="" className={styles.cardh} />
-            <Image src={se} alt="" height={200} width={200} />
-            <Image src={gfg} alt="" className={styles.cardh} />
-            <Image src={go} alt="" height={200} width={200} />
-          </div>
+          <MarqueeGroup />
+          <MarqueeGroup aria-hidden="true" />
         </div>
       </div>
     </div>

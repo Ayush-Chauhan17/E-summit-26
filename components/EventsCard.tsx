@@ -30,76 +30,94 @@ const EventsCard = (props: EventProps) => {
     >
       <motion.div
         whileHover={{
-          scale: 1.05,
-          rotate: 0.5,
-          boxShadow: "0px 0px 25px rgba(255, 215, 0, 0.2)",
+          scale: 1.02,
+          boxShadow: "0px 10px 40px -10px rgba(255, 215, 0, 0.15)", // Golden glow on hover
         }}
         transition={{ type: "spring", stiffness: 200, damping: 10 }}
         className="
-          sm:w-72 py-6 px-3 rounded-2xl
-          bg-gradient-to-b from-[#1a1a1a] via-[#0d0d0d] to-[#000000]
-          border border-yellow-500/30 shadow-lg
-          hover:border-yellow-400 transition-all duration-300
+          relative sm:w-80 py-6 px-4 rounded-3xl overflow-hidden
+          /* GLASS EFFECTS START */
+          bg-white/5 
+          backdrop-blur-xl 
+          border border-white/10 
+          shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
+          /* GLASS EFFECTS END */
+          hover:border-yellow-400/40 
+          transition-all duration-300
+          group
         "
       >
+        {/* Optional: Inner Shine Effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
         <motion.div
-          whileHover={{ scale: 1.08 }}
+          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}
-          className="flex justify-center"
+          className="flex justify-center relative z-10"
         >
-          <Image
-            unoptimized
-            src={props.imageUrl}
-            alt={props.title}
-            width={250}
-            height={200}
-            className="rounded-md object-cover border border-yellow-400/20 transition-transform duration-500"
-          />
+          <div className="relative rounded-xl overflow-hidden shadow-lg border border-white/5">
+            <Image
+              unoptimized
+              src={props.imageUrl}
+              alt={props.title}
+              width={280}
+              height={200}
+              className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
         </motion.div>
 
-        <h1 className="text-center font-bold text-xl text-yellow-400 mt-4 tracking-wide">
+        <h1 className="text-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 mt-5 tracking-wide drop-shadow-sm">
           {props.title}
         </h1>
 
         <AnimatePresence mode="wait">
-          <motion.p
+          <motion.div
             key={isExpanded ? "expanded" : "collapsed"}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="text-sm text-gray-300 p-4 leading-relaxed overflow-hidden"
+            className="overflow-hidden"
           >
-            {isExpanded ? props.description : shortDescription}
-          </motion.p>
+            <p className="text-sm text-gray-300/90 p-2 leading-relaxed font-light text-center">
+              {isExpanded ? props.description : shortDescription}
+            </p>
+          </motion.div>
         </AnimatePresence>
 
-        <div className="flex justify-center">
-          <span
+        <div className="flex justify-center mt-2 relative z-10">
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-yellow-400 font-semibold cursor-pointer hover:text-yellow-300 transition-colors duration-300"
+            className="text-xs text-yellow-400/80 hover:text-yellow-300 uppercase tracking-widest font-semibold transition-colors duration-300"
           >
             {isExpanded ? "Show less" : "Read more"}
-          </span>
+          </button>
         </div>
 
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-6 relative z-10">
           <motion.a
             href={props.eventPage}
             target="_blank"
             rel="noreferrer"
-            whileHover={{ y: -3, boxShadow: "0px 0px 15px rgba(255,215,0,0.4)" }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="w-full"
           >
             <Button
-              variant="secondary"
               className="
-                bg-yellow-500 text-black font-semibold 
-                hover:bg-yellow-400 shadow-md transition-all duration-300
-                rounded-full px-6 py-2
+                w-full
+                bg-gradient-to-r from-yellow-500 to-yellow-600 
+                text-black font-bold tracking-wider
+                border-0
+                hover:from-yellow-400 hover:to-yellow-500 
+                shadow-[0_0_20px_rgba(234,179,8,0.3)] 
+                hover:shadow-[0_0_30px_rgba(234,179,8,0.5)]
+                rounded-xl py-6
+                transition-all duration-300
               "
             >
-              Register
+              REGISTER
             </Button>
           </motion.a>
         </div>
@@ -109,22 +127,3 @@ const EventsCard = (props: EventProps) => {
 };
 
 export default EventsCard;
-
-
-// <article className="group relative flex flex-col space-y-2">
-//   <Image
-//     src={props.imageUrl}
-//     alt={props.title}
-//     width={404}
-//     height={0}
-//     className="rounded-md w-[400px] h-[200px] border bg-muted transition-colors bg-contain"
-//   />
-//   <h2 className="text-2xl font-extrabold">{props.title}</h2>
-//   <p className="text-muted-foreground text-sm">{props.description}</p>
-//
-//   <p className="text-sm text-muted-foreground">123</p>
-//
-//   <Link href={props.eventPage} className="absolute inset-0">
-//     <span className="sr-only">View Article</span>
-//   </Link>
-// </article>

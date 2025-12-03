@@ -1,10 +1,11 @@
+"use client";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -23,7 +24,7 @@ const data = [
     idx: 3,
     question: "What topics are covered in the E-Summit sessions?",
     answer:
-      "E-Summits often cover a wide range of topics related to entrepreneurship, technology, and business. Common themes include startup strategies, digital innovation, leadership development, investment trends, and emerging technologies. The specific agenda may vary, so it's advisable to check the event schedule or program to ensure the sessions align with your interests and goals.",
+      "E-Summits often cover a wide range of topics related to entrepreneurship, technology, and business. Common themes include startup strategies, digital innovation, leadership development, investment trends, and emerging technologies.",
   },
   {
     idx: 4,
@@ -35,7 +36,7 @@ const data = [
     idx: 5,
     question: "How can a startup participate in the Summit?",
     answer:
-      "Startups can become a part of the E-Summit 2025 through the Startup Expo - where they can set up their stalls for live demos of their product, and also through multiple events including the flagship event - The Million Dollar Pitch, where you get the chance to pitch your startup to a expert panel of investors from India's leading VCs",
+      "Startups can become a part of the E-Summit 2025 through the Startup Expo - where they can set up their stalls for live demos of their product, and also through multiple events including the flagship event - The Million Dollar Pitch.",
   },
   {
     idx: 6,
@@ -47,30 +48,49 @@ const data = [
 
 export default function FAQ() {
   return (
-    <section className="flex justify-center items-center   pb-8 pt-6 md:py-10 relative">
-      <Card className={"md:p-4 md:w-[780px]"}>
-        <CardHeader className={""}>
-          <CardTitle className={"text-center"}>
-            Frequently Asked Questions
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Accordion type="multiple" className="">
-            {data.map((faq, index) => {
-              return (
-                <AccordionItem value={"item-" + index} key={index}>
-                  <AccordionTrigger className={"text-start"}>
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className={""}>
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
-        </CardContent>
-      </Card>
+    <section className="relative flex flex-col justify-center items-center pb-20 pt-10 md:py-20 px-4">
+      
+      {/* Header with gradient text */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+          Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Questions</span>
+        </h2>
+        <div className="h-1 w-20 bg-yellow-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div className="w-full max-w-[850px] relative z-10">
+        <Accordion type="single" collapsible className="flex flex-col gap-4">
+          {data.map((faq, index) => {
+            return (
+              <AccordionItem
+                key={index}
+                value={"item-" + index}
+                className="
+                  border-none rounded-2xl mb-2 overflow-hidden
+                  /* GLASSMOPRHISM STYLES */
+                  bg-white/5 backdrop-blur-md border border-white/10
+                  transition-all duration-300 ease-in-out
+                  hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)]
+                  data-[state=open]:bg-white/10 data-[state=open]:border-yellow-500/30
+                "
+              >
+                <AccordionTrigger 
+                  className="
+                    px-6 py-4 text-left text-lg font-medium text-gray-100 
+                    hover:no-underline hover:text-yellow-400 transition-colors
+                    [&[data-state=open]]:text-yellow-400
+                  "
+                >
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6 text-gray-300 leading-relaxed font-light text-base">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
+      </div>
     </section>
   );
 }
