@@ -36,7 +36,7 @@ const About = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            ABOUT E-SUMMIT'26
+            ABOUT E-SUMMIT&apos;26
           </h3>
 
           <div className="space-y-6 text-gray-200 leading-relaxed font-light">
@@ -50,7 +50,7 @@ const About = () => {
               budding entrepreneurs, and established industry leaders, all
               united by a common passion:{" "}
               <span className="text-yellow-400 font-normal">
-                "The drive to create, innovate and transform the future."
+                &quot;The drive to create, innovate and transform the future.&quot;
               </span>
             </p>
 
