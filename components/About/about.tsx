@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="relative w-full py-20 px-4 flex justify-center items-center" id="about">
-      
+    <section
+      className="relative w-full py-20 px-4 flex justify-center items-center"
+      id="about"
+    >
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-900/20 blur-[100px] rounded-full -z-10" />
 
@@ -16,7 +18,6 @@ const About = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="
           relative w-full max-w-5xl 
-          /* GLASS CONTAINER */
           bg-white/5 backdrop-blur-xl border border-white/10 
           rounded-[2.5rem] p-8 md:p-14
           shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
@@ -43,11 +44,14 @@ const About = () => {
               E-Summit is an electrifying celebration of innovation and
               entrepreneurship, brought to you by the Entrepreneurship Cell (E-Cell) at the Indian Institute of Technology (IIT) BHU.
             </h1>
-            
+
             <p className="text-base md:text-lg opacity-80 max-w-3xl mx-auto">
               This annual festival is a convergence of visionary thinkers,
               budding entrepreneurs, and established industry leaders, all
-              united by a common passion: <span className="text-yellow-400 font-normal">"The drive to create, innovate and transform the future."</span>
+              united by a common passion:{" "}
+              <span className="text-yellow-400 font-normal">
+                "The drive to create, innovate and transform the future."
+              </span>
             </p>
 
             <p className="text-base md:text-lg opacity-80 max-w-3xl mx-auto">
