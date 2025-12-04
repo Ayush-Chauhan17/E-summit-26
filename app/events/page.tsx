@@ -27,7 +27,7 @@ const gradientTextStyle = {
 
 const page: FunctionComponent<Props> = (props) => {
   return (
-    <section className="pt-24 justify-center w-full min-h-screen">
+    <section className="pt-16 justify-center w-full min-h-screen">
 
       <EventsSection sectionTitle="Startup Events" events={startupEvents} />
       <EventsSection sectionTitle="Strategy Events" events={stategyEvents} />

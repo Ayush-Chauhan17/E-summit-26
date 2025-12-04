@@ -2,7 +2,7 @@
 import React, { FunctionComponent, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-interface OwnProps {}
+interface OwnProps { }
 
 type Props = OwnProps;
 
@@ -94,9 +94,8 @@ const StartupJunctionForm: React.FC = () => {
             <div className="flex items-center justify-between mb-6 w-full">
                 <div className="flex items-center">
                     <div
-                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${
-                            step >= 1 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
-                        }`}
+                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${step >= 1 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
+                            }`}
                     >
                         1
                     </div>
@@ -104,9 +103,8 @@ const StartupJunctionForm: React.FC = () => {
                 <div className={`h-px flex-1 mx-2 ${step > 1 ? "bg-blue-600" : "bg-gray-700"}`}></div>
                 <div className="flex items-center">
                     <div
-                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${
-                            step >= 2 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
-                        }`}
+                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${step >= 2 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
+                            }`}
                     >
                         2
                     </div>
@@ -114,9 +112,8 @@ const StartupJunctionForm: React.FC = () => {
                 <div className={`h-px flex-1 mx-2 ${step > 2 ? "bg-blue-600" : "bg-gray-700"}`}></div>
                 <div className="flex items-center">
                     <div
-                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${
-                            step >= 3 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
-                        }`}
+                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${step >= 3 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
+                            }`}
                     >
                         3
                     </div>
@@ -152,89 +149,104 @@ const StartupJunctionForm: React.FC = () => {
 
             {/* Step 2: Details */}
             {step === 2 && (
-                <div className="border border-gray-700 rounded-xl p-5 bg-black/30">
-                    <h2 className="text-lg font-semibold text-white mb-4">Attendee Details</h2>
-                    <div className="grid grid-cols-1 gap-4">
-                        <div>
-                            <label className="block text-sm text-gray-300 mb-1">Name</label>
-                            <input
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
-                                placeholder="Your full name"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-sm text-gray-300 mb-1">Email</label>
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
-                                placeholder="you@example.com"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-sm text-gray-300 mb-1">Startup Name</label>
-                            <input
-                                value={startupName}
-                                onChange={(e) => setStartupName(e.target.value)}
-                                className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
-                                placeholder="Your startup"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-sm text-gray-300 mb-1">Phone Number</label>
-                            <input
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                                className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
-                                placeholder="e.g. +91 98765 43210"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-sm text-gray-300 mb-1">City</label>
-                            <select
-                                value={city}
-                                onChange={(e) => setCity(e.target.value)}
-                                className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
-                            >
-                                <option value="" disabled>
-                                    Select city
-                                </option>
-                                <option value="Bangalore">Bangalore</option>
-                                <option value="Ahmedabad">Ahmedabad</option>
-                                <option value="Delhi">Delhi</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label className="block text-sm text-gray-300 mb-1">Attachment (optional)</label>
-                            <input
-                                type="file"
-                                accept="image/*,application/pdf"
-                                onChange={(e) => setFile(e.target.files?.[0] || null)}
-                                className="w-full text-sm text-gray-300 file:mr-3 file:px-3 file:py-2 file:rounded-md file:border-0 file:bg-gray-700 file:text-white hover:file:bg-gray-600"
-                            />
-                            <p className="text-xs text-gray-400 mt-1">Upload pitch deck, logo, or any supporting file (PDF/JPG/PNG).</p>
-                        </div>
+                // <div className="border border-gray-700 rounded-xl p-5 bg-black/30">
+                //     <h2 className="text-lg font-semibold text-white mb-4">Attendee Details</h2>
+                //     <div className="grid grid-cols-1 gap-4">
+                //         <div>
+                //             <label className="block text-sm text-gray-300 mb-1">Name</label>
+                //             <input
+                //                 value={name}
+                //                 onChange={(e) => setName(e.target.value)}
+                //                 className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
+                //                 placeholder="Your full name"
+                //             />
+                //         </div>
+                //         <div>
+                //             <label className="block text-sm text-gray-300 mb-1">Email</label>
+                //             <input
+                //                 type="email"
+                //                 value={email}
+                //                 onChange={(e) => setEmail(e.target.value)}
+                //                 className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
+                //                 placeholder="you@example.com"
+                //             />
+                //         </div>
+                //         <div>
+                //             <label className="block text-sm text-gray-300 mb-1">Startup Name</label>
+                //             <input
+                //                 value={startupName}
+                //                 onChange={(e) => setStartupName(e.target.value)}
+                //                 className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
+                //                 placeholder="Your startup"
+                //             />
+                //         </div>
+                //         <div>
+                //             <label className="block text-sm text-gray-300 mb-1">Phone Number</label>
+                //             <input
+                //                 value={phone}
+                //                 onChange={(e) => setPhone(e.target.value)}
+                //                 className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
+                //                 placeholder="e.g. +91 98765 43210"
+                //             />
+                //         </div>
+                //         <div>
+                //             <label className="block text-sm text-gray-300 mb-1">City</label>
+                //             <select
+                //                 value={city}
+                //                 onChange={(e) => setCity(e.target.value)}
+                //                 className="w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 text-white focus:outline-none focus:ring-1 focus:ring-blue-600"
+                //             >
+                //                 <option value="" disabled>
+                //                     Select city
+                //                 </option>
+                //                 <option value="Bangalore">Bangalore</option>
+                //                 <option value="Ahmedabad">Ahmedabad</option>
+                //                 <option value="Delhi">Delhi</option>
+                //             </select>
+                //         </div>
+                //         <div>
+                //             <label className="block text-sm text-gray-300 mb-1">Attachment (optional)</label>
+                //             <input
+                //                 type="file"
+                //                 accept="image/*,application/pdf"
+                //                 onChange={(e) => setFile(e.target.files?.[0] || null)}
+                //                 className="w-full text-sm text-gray-300 file:mr-3 file:px-3 file:py-2 file:rounded-md file:border-0 file:bg-gray-700 file:text-white hover:file:bg-gray-600"
+                //             />
+                //             <p className="text-xs text-gray-400 mt-1">Upload pitch deck, logo, or any supporting file (PDF/JPG/PNG).</p>
+                //         </div>
+                //     </div>
+                //     {error && <p className="text-sm text-red-400 mt-3">{error}</p>}
+                //     <div className="mt-6 flex items-center justify-between">
+                //         <button type="button" onClick={() => setStep(1)} className="px-4 py-2 rounded-md border border-gray-600 text-white hover:bg-gray-800">
+                //             Back
+                //         </button>
+                //         <button
+                //             type="button"
+                //             onClick={onSubmit}
+                //             disabled={submitting || !name || !email || !startupName || !phone || !city}
+                //             className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-60"
+                //         >
+                //             {submitting ? "Submitting…" : "Submit"}
+                //         </button>
+                //     </div>
+                // </div>
+
+                <div className="flex flex-col items-center text-center border border-yellow-500/20 bg-black/40 rounded-2xl p-8 w-full">
+                    <div className="text-5xl mb-4">
+                        😕
                     </div>
-                    {error && <p className="text-sm text-red-400 mt-3">{error}</p>}
-                    <div className="mt-6 flex items-center justify-between">
-                        <button type="button" onClick={() => setStep(1)} className="px-4 py-2 rounded-md border border-gray-600 text-white hover:bg-gray-800">
-                            Back
-                        </button>
-                        <button
-                            type="button"
-                            onClick={onSubmit}
-                            disabled={submitting || !name || !email || !startupName || !phone || !city}
-                            className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-60"
-                        >
-                            {submitting ? "Submitting…" : "Submit"}
-                        </button>
+
+                    <div className="font-extrabold text-2xl bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent tracking-wide">
+                        Registration Closed
                     </div>
+
+                    <div className="text-gray-400 text-sm mt-1">
+                        Sorry, registrations are no longer available.
+                    </div>
+
+                    <hr className="w-full border-yellow-500/10 my-6" />
                 </div>
             )}
-
             {/* Step 3: Success */}
             {step === 3 && (
                 <div className="border border-gray-700 rounded-xl p-8 bg-black/30 text-center">
