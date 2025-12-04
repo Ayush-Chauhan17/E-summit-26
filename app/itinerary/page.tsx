@@ -6,7 +6,7 @@ type Props = OwnProps;
 
 const Page: FunctionComponent<Props> = () => {
   return (
-    <section className="w-full pt-[100px]">
+    <section className="w-full pt-16">
       <div className="relative w-full min-h-screen overflow-x-auto">
         <table className="border-collapse border-4 border-[#011854] w-[98%] mx-auto my-12 text-lg text-center rounded-2xl overflow-hidden">
           <thead>

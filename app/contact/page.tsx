@@ -16,7 +16,7 @@ type Props = OwnProps;
 const page: FunctionComponent<Props> = (props) => {
   return (
     <section>
-      <div className="pt-24 justify-center w-full min-h-screen">
+      <div className="pt-16 justify-center w-full min-h-screen">
         <Contact />
       </div>
     </section>

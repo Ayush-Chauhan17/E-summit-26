@@ -9,7 +9,7 @@ export default function CardWithForm() {
   return (
     <>
     <div className="flex flex-col items-center justify-center w-full min-h-screen">
-    <div className="mt-20 mb-0 text-center">
+    <div className="mt-0 mb-0 text-center">
         <p
           className="font-bold text-3xl inline-block"
           style={{
@@ -58,7 +58,7 @@ export default function CardWithForm() {
 
       {/* Button for redirecting to Google Forms */}
       <Link href="https://forms.gle/ybXS7KoaHxqDSkH79" target="_blank" passHref>
-        <Button className="mt-12" variant={"default"} 
+        <Button className="mt-5" variant={"default"} 
                         style={{
                           background: "linear-gradient(120deg, #F1E821, #23C0AD,#487AFA )",
                           color: "white", 
