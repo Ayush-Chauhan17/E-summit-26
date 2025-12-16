@@ -55,6 +55,7 @@ const StatItem: FunctionComponent<Stat & { isFirstItem: boolean }> = ({
     <div
       ref={ref}
       className={`
+        
         relative flex flex-col justify-center items-center py-4 px-2
         w-full md:w-auto
         group

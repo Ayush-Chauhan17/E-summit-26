@@ -38,7 +38,7 @@ const Hero: FunctionComponent = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden py-2">
+    <section className=" relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden py-2">
       {/* Background Particles */}
       <div className="absolute inset-0 -z-10">
         <Particle />

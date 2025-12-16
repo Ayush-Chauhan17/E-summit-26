@@ -54,6 +54,14 @@ export const stategyEvents = [
     eventPage: "https://unstop.com/o/wVsmRrg?lb=orhiPzt&utm_medium=Share&utm_source=eventcel20660&utm_campaign=Competitions",
   },
   {
+    title: "Innovation Crucible",
+    description:
+      "Innovation Crucible is a high-rigour technology commercialization challenge designed to build the next generation of innovation evaluators, IP strategists and deep-tech founders. It brings together analytical thinking, real-world technical assessment and strategic decision-making, all within a dynamic, competitive format. Participants not only learn how to assess technologies like professionals at a TTO or VC fund, but also get the opportunity to pitch to industry experts and investors at the grand finale in IIT BHU.",
+    imageUrl: "/images/innCrucible.png",
+    isOdd: false,
+    eventPage: "https://unstop.com/competitions/innovation-crucible-e-summit26-iit-bhu-varanasi-iit-bhu-1603920",
+  },
+  {
     title: "Design Rush",
     description:
       "Design Rush is the ultimate UI/UX competition, where teams take on real challenges provided by startups. The participants craft wireframes, prototypes, and dynamic solutions as they get to showcase their design prowess and help startups navigate the digital landscape in this thrilling competition.",
