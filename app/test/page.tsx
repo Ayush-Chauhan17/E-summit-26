@@ -1,11 +1,3 @@
-import React from 'react'
-import Intro from "../../components/IntroVideo"
-const page = () => {
-  return (
-    <div>
-      <Intro/>
-    </div>
-  )
+export default function Page() {
+  return <div>Test Page</div>;
 }
-
-export default page

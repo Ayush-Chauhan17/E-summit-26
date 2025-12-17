@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect, FunctionComponent } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Script from "next/script";
+import { useTransitionRouter } from "next-view-transitions";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, ChevronDown } from "lucide-react";
 import logo from "@/public/logos/E-Cell-White[1].png";
@@ -17,9 +18,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-// Removed the old CSS file import to prevent conflicts
-// import "./Navbar.css"; 
 
 declare global {
   interface Window {
@@ -38,10 +36,32 @@ const navItems = [
 ];
 
 const Navbar: FunctionComponent = () => {
+  const router = useTransitionRouter();
+  const pathname = usePathname();
   const [scrolling, setScrolling] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isPortrait, setIsPortrait] = useState(true);
   const [isHoveringSJ, setIsHoveringSJ] = useState(false);
+
+  
+  const triggerPageTransition = (path: string) => {
+    if (pathname === path) return;
+
+ 
+    document.documentElement.animate(
+      [
+        { clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" },
+        { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
+      ],
+      {
+        duration: 1500,
+        easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+        pseudoElement: "::view-transition-new(root)",
+      }
+    );
+
+    router.push(path);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 0);
@@ -59,9 +79,6 @@ const Navbar: FunctionComponent = () => {
 
   return (
     <header className="w-full min-h-fit sticky top-4 z-50 max-w-[76.5rem] mx-auto px-4 md:px-0">
-      {/* GLASS EFFECT APPLIED HERE 
-          Logic: If scrolling -> Darker background + Blur. If top -> Lighter background + Subtle Blur.
-      */}
       <nav
         className={`
           w-full rounded-full transition-all duration-300 ease-in-out border
@@ -75,8 +92,11 @@ const Navbar: FunctionComponent = () => {
         <div className="relative block px-6 py-2">
           <div className="flex items-center justify-between w-full gap-1 capitalize">
             
-            {/* Logo */}
-            <Link href="/" aria-label="logo" className="flex items-center">
+            
+            <div 
+              onClick={() => triggerPageTransition("/")} 
+              className="flex items-center cursor-pointer"
+            >
               <Image
                 unoptimized
                 src={logo}
@@ -85,11 +105,10 @@ const Navbar: FunctionComponent = () => {
                 height={20}
                 className="scale-125 sm:w-28 object-contain"
               />
-            </Link>
+            </div>
 
-            {/* Navigation */}
+            
             {isPortrait ? (
-              // Portrait (mobile)
               <div className="relative">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -102,20 +121,21 @@ const Navbar: FunctionComponent = () => {
                     </Button>
                   </DropdownMenuTrigger>
 
-                  {/* Added Glass Class to Mobile Dropdown */}
                   <DropdownMenuContent align="end" className="w-56 mr-2 glass bg-black/80 text-white border-white/20">
                     <DropdownMenuLabel>Navigation</DropdownMenuLabel>
                     <DropdownMenuSeparator className="bg-white/20" />
                     <DropdownMenuGroup>
                       {navItems.map((item, index) => (
-                        <DropdownMenuItem key={index} className="focus:bg-white/10 focus:text-white cursor-pointer">
-                          <Link href={item.link} className="w-full">
-                            {item.name}
-                          </Link>
+                        <DropdownMenuItem 
+                          key={index} 
+                          className="focus:bg-white/10 focus:text-white cursor-pointer"
+                          onClick={() => triggerPageTransition(item.link)}
+                        >
+                          {item.name}
                         </DropdownMenuItem>
                       ))}
 
-                      {/* SJ Dropdown inside portrait */}
+                      
                       <DropdownMenuItem className="p-0 focus:bg-transparent">
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
@@ -127,14 +147,23 @@ const Navbar: FunctionComponent = () => {
                             <DropdownMenuLabel>Startup Junction</DropdownMenuLabel>
                             <DropdownMenuSeparator className="bg-white/20" />
                             <DropdownMenuGroup>
-                              <DropdownMenuItem asChild className="focus:bg-white/10 focus:text-white cursor-pointer">
-                                <Link href="/SJ/delhi">SJ - Delhi</Link>
+                              <DropdownMenuItem 
+                                onClick={() => triggerPageTransition("/SJ/delhi")} 
+                                className="focus:bg-white/10 focus:text-white cursor-pointer"
+                              >
+                                SJ - Delhi
                               </DropdownMenuItem>
-                              <DropdownMenuItem asChild className="focus:bg-white/10 focus:text-white cursor-pointer">
-                                <Link href="/SJ/ahmedabad">SJ - Ahmedabad</Link>
+                              <DropdownMenuItem 
+                                onClick={() => triggerPageTransition("/SJ/ahmedabad")} 
+                                className="focus:bg-white/10 focus:text-white cursor-pointer"
+                              >
+                                SJ - Ahmedabad
                               </DropdownMenuItem>
-                              <DropdownMenuItem asChild className="focus:bg-white/10 focus:text-white cursor-pointer">
-                                <Link href="/SJ/bangalore">SJ - Bangalore</Link>
+                              <DropdownMenuItem 
+                                onClick={() => triggerPageTransition("/SJ/bangalore")} 
+                                className="focus:bg-white/10 focus:text-white cursor-pointer"
+                              >
+                                SJ - Bangalore
                               </DropdownMenuItem>
                             </DropdownMenuGroup>
                           </DropdownMenuContent>
@@ -145,20 +174,21 @@ const Navbar: FunctionComponent = () => {
                 </DropdownMenu>
               </div>
             ) : (
-              // Landscape (desktop)
               <div className="hidden lg:flex">
                 <ul className="tracking-wide font-light text-sm flex lg:flex-row flex-wrap justify-end items-center gap-2">
                   {navItems.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.link} className="no-underline">
-                        <Button className="text-white hover:bg-white/10 hover:text-primary-foreground transition-colors" variant="ghost">
-                          {item.name}
-                        </Button>
-                      </Link>
+                      <Button 
+                        onClick={() => triggerPageTransition(item.link)}
+                        className="text-white hover:bg-white/10 hover:text-primary-foreground transition-colors" 
+                        variant="ghost"
+                      >
+                        {item.name}
+                      </Button>
                     </li>
                   ))}
 
-                  {/* SJ Hover Dropdown */}
+                  
                   <li
                     onMouseEnter={() => setIsHoveringSJ(true)}
                     onMouseLeave={() => setIsHoveringSJ(false)}
@@ -178,19 +208,27 @@ const Navbar: FunctionComponent = () => {
                           />
                         </Button>
                       </DropdownMenuTrigger>
-                      {/* Added Glass Class to Desktop Dropdown */}
                       <DropdownMenuContent align="end" className="w-56 glass bg-black/80 text-white border-white/20 mt-2">
                         <DropdownMenuLabel>Startup Junction</DropdownMenuLabel>
                         <DropdownMenuSeparator className="bg-white/20" />
                         <DropdownMenuGroup>
-                          <DropdownMenuItem asChild className="focus:bg-white/10 focus:text-white cursor-pointer">
-                            <Link href="/SJ/delhi">SJ - Delhi</Link>
+                          <DropdownMenuItem 
+                            onClick={() => triggerPageTransition("/SJ/delhi")} 
+                            className="focus:bg-white/10 focus:text-white cursor-pointer"
+                          >
+                            SJ - Delhi
                           </DropdownMenuItem>
-                          <DropdownMenuItem asChild className="focus:bg-white/10 focus:text-white cursor-pointer">
-                            <Link href="/SJ/ahmedabad">SJ - Ahmedabad</Link>
+                          <DropdownMenuItem 
+                            onClick={() => triggerPageTransition("/SJ/ahmedabad")} 
+                            className="focus:bg-white/10 focus:text-white cursor-pointer"
+                          >
+                            SJ - Ahmedabad
                           </DropdownMenuItem>
-                          <DropdownMenuItem asChild className="focus:bg-white/10 focus:text-white cursor-pointer">
-                            <Link href="/SJ/bangalore">SJ - Bangalore</Link>
+                          <DropdownMenuItem 
+                            onClick={() => triggerPageTransition("/SJ/bangalore")} 
+                            className="focus:bg-white/10 focus:text-white cursor-pointer"
+                          >
+                            SJ - Bangalore
                           </DropdownMenuItem>
                         </DropdownMenuGroup>
                       </DropdownMenuContent>
@@ -200,26 +238,24 @@ const Navbar: FunctionComponent = () => {
               </div>
             )}
 
-            {/* Register Button */}
+            
             {!isPortrait && (
               <div className="hidden lg:block ml-4">
-                <Link href="/payment?type=esummit" className="no-underline">
-                  <Button
-                    variant="default"
-                    style={{
-                      background:
-                        "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
-                      color: "white",
-                      border: "none",
-                      padding: "0.5rem 1.5rem",
-                      fontWeight: "bold",
-                      borderRadius: "9999px", // Fully rounded button to match navbar
-                    }}
-                    className="hover:opacity-90 transition-opacity shadow-[0_0_15px_rgba(35,192,173,0.5)]" // Added Glow
-                  >
-                    Register
-                  </Button>
-                </Link>
+                <Button
+                  onClick={() => triggerPageTransition("/payment?type=esummit")}
+                  variant="default"
+                  style={{
+                    background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+                    color: "white",
+                    border: "none",
+                    padding: "0.5rem 1.5rem",
+                    fontWeight: "bold",
+                    borderRadius: "9999px",
+                  }}
+                  className="hover:opacity-90 transition-opacity shadow-[0_0_15px_rgba(35,192,173,0.5)]"
+                >
+                  Register
+                </Button>
               </div>
             )}
           </div>
@@ -227,8 +263,6 @@ const Navbar: FunctionComponent = () => {
       </nav>
 
       <ToastContainer />
-
-      {/* Townscript Widget */}
       <Script
         src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js"
         strategy="afterInteractive"
