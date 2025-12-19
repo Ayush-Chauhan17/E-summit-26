@@ -7,7 +7,7 @@ import {
 import EventsSection from "@/app/events/EventsSection";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import { Metadata } from "next";
-
+import { Poppins } from "next/font/google"; 
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
@@ -15,12 +15,14 @@ export const metadata: Metadata = {
     template: "%s | Events | E-Summit'26 IIT BHU",
   },
 };
-
 interface OwnProps {}
 type Props = OwnProps;
-
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 const gradientTextStyle = {
-  background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+  background: "linear-gradient(90deg, #3bb7d3ff, #23C0AD, #487AFA)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
 };
@@ -28,33 +30,22 @@ const gradientTextStyle = {
 const page: FunctionComponent<Props> = () => {
   return (
     <>
-      
       <InteractiveBackground />
-
-      <section
-        className="pt-16 justify-center w-full min-h-screen"
-        style={{ fontFamily: "'Vampire Makers', cursive" }}
-      >
+      <section className={`pt-16 justify-center w-full min-h-screen ${poppins.className}`}>
         <EventsSection
           sectionTitle="Startup Events"
           events={startupEvents}
-          
         />
-
         <EventsSection
           sectionTitle="Strategy Events"
           events={stategyEvents}
-          
         />
-
         <EventsSection
           sectionTitle="Fun Events"
           events={funEvents}
-          
         />
       </section>
     </>
   );
 };
-
 export default page;

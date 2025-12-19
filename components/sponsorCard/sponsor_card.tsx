@@ -64,7 +64,7 @@ const MarqueeGroup = () => (
 const MarqueeComponent = () => {
   return (
     /* isme {styles.root rahega}*/
-    <div className= "{styles.root}"> 
+    <div className= {styles.root}> 
       <h2 className="text-center text-4xl md:text-5xl font-bold text-white mb-10">
         <span
           style={{
