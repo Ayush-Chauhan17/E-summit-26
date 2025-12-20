@@ -65,7 +65,7 @@ export default function RootLayout({
 
        
         <div className="lg:hidden">
-          <LottieNavbar />
+          {/* <LottieNavbar /> */}
         </div>
 
         <Footer />
