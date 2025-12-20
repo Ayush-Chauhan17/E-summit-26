@@ -37,7 +37,7 @@ const Contact: FunctionComponent = () => {
     <div>
       <div className="mb-3 mt-3 text-center">
         <p
-          className="font-bold text-3xl inline-block"
+          className="font-bold text-3xl sm:text-4xl md:text-5xl inline-block"
           style={{
             background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
             WebkitBackgroundClip: "text",
@@ -55,7 +55,7 @@ const Contact: FunctionComponent = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <FaXTwitter className="text-blue-600 text-2xl hover:text-blue-600/75 cursor-pointer transition ease-in-out" />
+          <FaXTwitter className="text-blue-600 text-3xl hover:text-blue-600/75 cursor-pointer transition ease-in-out" />
         </Link>
         <Link
           className="hover:scale-125 transition ease-in-out"
@@ -63,7 +63,7 @@ const Contact: FunctionComponent = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <FaInstagram className="text-pink-600 text-2xl hover:text-pink-600/75 cursor-pointer transition ease-in-out" />
+          <FaInstagram className="text-pink-600 text-3xl hover:text-pink-600/75 cursor-pointer transition ease-in-out" />
         </Link>
         <Link
           className="text-blue-600 hover:text-blue-600/75 hover:scale-125 transition ease-in-out"
@@ -71,7 +71,7 @@ const Contact: FunctionComponent = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <FaLinkedin className="text-blue-600 text-2xl hover:text-blue-600/75 cursor-pointer transition ease-in-out" />
+          <FaLinkedin className="text-blue-600 text-3xl hover:text-blue-600/75 cursor-pointer transition ease-in-out" />
         </Link>
         <Link
           className="text-gray-900 hover:text-gray-900/75 transition ease-in-out"
@@ -79,7 +79,7 @@ const Contact: FunctionComponent = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <FaYoutube className="text-red-600 text-2xl hover:text-red-600/75 cursor-pointer dark:text-gray-300 dark:hover:text-gray-300/75 hover:scale-125 transition ease-in-out" />
+          <FaYoutube className="text-red-600 text-3xl hover:text-red-600/75 cursor-pointer dark:text-gray-300 dark:hover:text-gray-300/75 hover:scale-125 transition ease-in-out" />
         </Link>
       </div>
 
@@ -96,7 +96,7 @@ const Contact: FunctionComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Enter your name" {...field} />
+                    <Input  className="text-sm sm:text-base md:text-lg" placeholder="Enter your name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -109,7 +109,7 @@ const Contact: FunctionComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Enter your email" {...field} />
+                    <Input  className="text-sm sm:text-base md:text-lg" placeholder="Enter your email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -122,7 +122,7 @@ const Contact: FunctionComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Enter your phone number" {...field} />
+                    <Input  className="text-sm sm:text-base md:text-lg" placeholder="Enter your phone number" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -135,7 +135,7 @@ const Contact: FunctionComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Textarea placeholder="Enter your message" {...field} />
+                    <Textarea className="text-sm sm:text-base md:text-lg min-h-[120px]" placeholder="Enter your message" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -149,7 +149,7 @@ const Contact: FunctionComponent = () => {
                 <FormItem>
                   <FormControl>
                     <Select {...field}>
-                      <SelectTrigger className="w-[180px]">
+                      <SelectTrigger className="w-[180px] text-sm sm:text-base md:text-lg">
                         <SelectValue placeholder="Role" />
                       </SelectTrigger>
                       <SelectContent>
@@ -166,7 +166,7 @@ const Contact: FunctionComponent = () => {
             />
 
             <Button
-              className="w-full bg-[#23C0AD] hover:bg-[#1d9e8f]"
+              className="w-full bg-[#23C0AD] hover:bg-[#1d9e8f] text-base sm:text-lg md:text-xl font-semibold py-6"
               type="submit"
             >
               Submit
@@ -179,7 +179,7 @@ const Contact: FunctionComponent = () => {
       <div className="text-center mx-24 my-7">
         📍
         <p
-          className="font-bold text-xl inline-block"
+          className="font-bold text-xl sm:text-2xl md:text-3xl inline-block"
           style={{
             background: "linear-gradient(90deg, #F1E821, #23C0AD,#487AFA )",
             WebkitBackgroundClip: "text",

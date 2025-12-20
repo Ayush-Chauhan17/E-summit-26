@@ -23,11 +23,11 @@ export default function Home() {
 
       <main className="relative z-10 grid items-center gap-12 px-4 sm:px-6">
         <Hero />
-        
+
         <div className="mt-12 sm:mt-16 lg:mt-20">
           <Stats />
         </div>
-        
+
         <About />
         <WSYA />
         <SlidersComponent />

@@ -85,7 +85,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
               }`}
             >
               <div className="bg-gradient-to-br from-[#1e1e1e] via-[#222] to-[#2a2a2a] border border-gray-700/50 rounded-2xl shadow-lg sm:px-8 p-6 flex flex-col items-center gap-3 min-h-[220px] hover:border-[#487AFA]/40 transition-all duration-300">
-                <p className="text-green-200 text-center text-sm italic">{slide.post}</p>
+                <p className="text-green-200/90 text-center italic text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">{slide.post}</p>
                 <h3 className="text-[#F1E821] font-semibold text-lg">{slide.name}</h3>
                 <p className="text-white text-sm text-center">{slide.description}</p>
               </div>

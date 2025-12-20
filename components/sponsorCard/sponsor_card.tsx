@@ -65,7 +65,7 @@ const MarqueeComponent = () => {
   return (
     /* isme {styles.root rahega}*/
     <div className= {styles.root}> 
-      <h2 className="text-center text-4xl md:text-5xl font-bold text-white mb-10">
+      <h2 className="text-center text-4xl md:text-6xl font-bold text-white mb-10">
         <span
           style={{
             background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",

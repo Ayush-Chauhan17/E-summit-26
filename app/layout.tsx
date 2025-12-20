@@ -56,6 +56,7 @@ import { fontSans } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+// import LottieNavbar from "@/components/LottieNavbar";
 import "./globals.css";
 import React from "react";
 import BackgroundWrapper from "./BackgroundWrapper";

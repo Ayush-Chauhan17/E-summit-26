@@ -28,7 +28,7 @@ const ResponsiveComponent = () => {
     {
       name: "Swati",
       description: "UI/UX Designer",
-      post: "The event was well-organized, and the energy throughout the summit was amazing. I especially enjoyed the pitch competition—it was both challenging and rewarding!",
+      post: "The event was well organized, and the energy throughout the summit was amazing. I especially enjoyed the pitch competition.It was both challenging and rewarding!",
     },
     {
       name: "Manoj",

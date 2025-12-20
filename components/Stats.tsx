@@ -107,7 +107,7 @@ const Stats: FunctionComponent = () => {
       {/* Background Glow for Stats */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-32 bg-blue-300/10 blur-[80px] -z-10 pointer-events-none" />
 
-      <h1 className="text-2xl md:text-4xl font-bold text-center mb-10 text-white tracking-wide">
+      <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-10 text-white tracking-wide">
         Key Event <span className="text-teal-400">Statistics</span>
       </h1>
 
