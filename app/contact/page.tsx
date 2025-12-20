@@ -20,7 +20,7 @@ const page: FunctionComponent<Props> = () => {
       {/* Interactive Background */}
       <InteractiveBackground />
 
-      <section style={{ fontFamily: "'Vampire Makers', cursive" }}>
+      <section style={{ fontFamily: "'azonix', cursive" }}>
         <div className="pt-16 justify-center w-full min-h-screen">
           <Contact />
         </div>

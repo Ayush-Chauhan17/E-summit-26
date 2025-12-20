@@ -21,7 +21,7 @@ const EventsSection: React.FC<EventsSectionProps> = ({
     <h1
       className="text-3xl md:text-6xl flex  justify-center font-semibold sm:py-6 inline-block"
       style={{
-        background: "linear-gradient(180deg,  #F1E821, #23C0AD,#487AFA)",
+        background: "linear-gradient(180deg,  #327bb0ff, #23C0AD,#487AFA)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
       }}

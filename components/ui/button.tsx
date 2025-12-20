@@ -4,10 +4,6 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-// Updated color palette
-// Yellow (#F1E821) – Primary
-// Teal (#23C0AD) – Secondary
-// Blue (#487AFA) – Accent / Focus
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#487AFA] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
