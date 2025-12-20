@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import CustomSlider from "./CustomSlider";
 import AlternativeComponent from "./AltComp";
 
@@ -42,51 +43,58 @@ const ResponsiveComponent = () => {
   ];
 
   return (
-    <section
-      className=" 
-        relative py-16 md:py-20 
-        bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#161616]
-        text-[#F1E821]
-        overflow-hidden
-      "
-    >
-      <div className="text-center mb-8 px-4">
-        <h2
-          className="
-            text-3xl md:text-5xl font-extrabold uppercase tracking-wide
-            text-transparent bg-clip-text 
-            bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA]
-            drop-shadow-[0_0_10px_rgba(35,192,173,0.4)]
-          "
-        >
-          What Our Participants Say
-        </h2>
-        <p className="text-[#cfcfcf] mt-3 text-sm md:text-base">
-          Hear directly from the attendees about their experiences at the summit.
-        </p>
-      </div>
+    <section className="relative w-full py-20 px-4 flex justify-center items-center">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal-900/20 blur-[100px] rounded-full -z-10" />
+      
+      {/* Additional decorative blur glows */}
+      <div className="absolute top-10 left-20 w-72 h-72 bg-[#23C0AD]/20 blur-[120px] -z-10" />
+      <div className="absolute bottom-10 right-20 w-72 h-72 bg-[#487AFA]/20 blur-[120px] -z-10" />
 
-      {/* Custom Slider */}
-      <div
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut" }}
         className="
-          mx-auto max-w-6xl px-4
-          border-t border-[#23C0AD]/20 
-          pt-6 backdrop-blur-[2px]
+          relative w-full max-w-6xl 
+          bg-white/10 backdrop-blur-xl border border-white/20 
+          rounded-[2.5rem] p-8 md:p-14
+          shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]
+          overflow-hidden
         "
       >
-        <CustomSlider
-          heading="What our Participants speak for us?"
-          gradientText="Participants speak"
-          slidesData={slidesData}
-          sliderType="participant"
-        />
-      </div>
+        {/* Decorative Top Gradient Line */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-teal-500/50 to-transparent" />
 
-      {/* Optional decorative blur glows */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-10 left-20 w-72 h-72 bg-[#23C0AD]/20 blur-[120px]" />
-        <div className="absolute bottom-10 right-20 w-72 h-72 bg-[#487AFA]/20 blur-[120px]" />
-      </div>
+        <div className="text-center mb-8">
+          <h2
+            className="
+              text-3xl md:text-5xl font-extrabold tracking-tight mb-4
+            "
+            style={{
+              background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            What Our Participants Say
+          </h2>
+          <p className="text-gray-200 text-sm md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
+            Hear directly from the attendees about their experiences at the summit.
+          </p>
+        </div>
+
+        {/* Custom Slider */}
+        <div className="relative">
+          <CustomSlider
+            heading="What our Participants speak for us?"
+            gradientText="Participants speak"
+            slidesData={slidesData}
+            sliderType="participant"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 };
