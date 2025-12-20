@@ -1,56 +1,59 @@
 import React, { FunctionComponent } from "react";
 import {
   funEvents,
-  // schoolEvents,
   startupEvents,
   stategyEvents,
 } from "@/app/events/eventsData";
 import EventsSection from "@/app/events/EventsSection";
+import InteractiveBackground from "@/components/InteractiveBackground";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Events | E-Summit'25 IIT BHU",
-    template: "%s | Events | E-Summit'25 IIT BHU",
+    default: "Events | E-Summit'26 IIT BHU",
+    template: "%s | Events | E-Summit'26 IIT BHU",
   },
 };
-interface OwnProps {}
 
+interface OwnProps {}
 type Props = OwnProps;
 
 const gradientTextStyle = {
-  background: "linear-gradient(90deg, #6A23A6, #E91045)", 
-  WebkitBackgroundClip: "text", 
-  WebkitTextFillColor: "transparent", 
+  background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
 };
 
-const page: FunctionComponent<Props> = (props) => {
+const page: FunctionComponent<Props> = () => {
   return (
-    <section className="pt-16 justify-center w-full min-h-screen">
+    <>
+      
+      <InteractiveBackground />
 
-      <EventsSection sectionTitle="Startup Events" events={startupEvents} />
-      <EventsSection sectionTitle="Strategy Events" events={stategyEvents} />
-      <EventsSection sectionTitle="Fun Events" events={funEvents} />
-      {/* <EventsSection sectionTitle="School Event" events={schoolEvents} /> */}
-    </section>
+      <section
+        className="pt-16 justify-center w-full min-h-screen"
+        style={{ fontFamily: "'Vampire Makers', cursive" }}
+      >
+        <EventsSection
+          sectionTitle="Startup Events"
+          events={startupEvents}
+          
+        />
 
+        <EventsSection
+          sectionTitle="Strategy Events"
+          events={stategyEvents}
+          
+        />
 
-  //   <section className="flex justify-center items-center w-full min-h-screen">
-  //   <div>
-  //     <h1
-  //       className="text-6xl m-4 font-semibold sm:py-6"
-  //       style={{
-  //         background: "linear-gradient(90deg, #6A23A6, #E91045)",
-  //         WebkitBackgroundClip: "text",
-  //         WebkitTextFillColor: "transparent",
-  //         display: "inline-block",
-  //       }}
-  //     >
-  //       COMING SOON...
-  //     </h1>
-  //   </div>
-  // </section>
+        <EventsSection
+          sectionTitle="Fun Events"
+          events={funEvents}
+          
+        />
+      </section>
+    </>
   );
 };
 

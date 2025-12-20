@@ -14,22 +14,22 @@ import Head from "next/head";
 // import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  applicationName: "E-Summit'25 | IIT BHU Varanasi",
+  applicationName: "E-Summit'26 | IIT BHU Varanasi",
   referrer: "origin-when-cross-origin",
   title: {
-    default: "E-Summit'25 | IIT BHU Varanasi",
-    template: "%s | E-Summit'25 | IIT BHU Varanasi",
+    default: "E-Summit'26 | IIT BHU Varanasi",
+    template: "%s | E-Summit'26 | IIT BHU Varanasi",
   },
-  description: "E-Summit'25 | IIT BHU Varanasi",
+  description: "E-Summit'26 | IIT BHU Varanasi",
   category: "Technology and Entrepreneurship Summit",
   keywords: [
     "E-Summit",
-    "E-Summit'25",
-    "E-Summit'25 IIT BHU Varanasi",
+    "E-Summit'26",
+    "E-Summit'26 IIT BHU Varanasi",
     "IIT BHU Varanasi",
     "E-Summit IIT BHU Varanasi",
-    "E-Summit'25 IIT BHU",
-    "esummit 25",
+    "E-Summit'26 IIT BHU",
+    "esummit 26",
     "esummit",
   ],
 };
@@ -43,7 +43,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
-        <link rel="icon" href="/favicon-light.ico" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/E-Cell-White" media="(prefers-color-scheme: light)" />
       </head>
       <body
         className={cn(
