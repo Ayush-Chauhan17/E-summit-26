@@ -1,20 +1,16 @@
 import React, { FunctionComponent } from "react";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import { Poppins } from "next/font/google";
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
-
 interface OwnProps {}
 type Props = OwnProps;
-
 const Page: FunctionComponent<Props> = () => {
   return (
     <>
       <InteractiveBackground />
-
       <section className={`w-full pt-16 ${poppins.className}`}>
         <div className="relative w-full min-h-screen overflow-x-auto">
           <table
@@ -94,5 +90,4 @@ const Page: FunctionComponent<Props> = () => {
     </>
   );
 };
-
 export default Page;
