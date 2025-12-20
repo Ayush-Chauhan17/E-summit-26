@@ -1,8 +1,21 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 const About = () => {
+  const textRef = useRef<HTMLParagraphElement | null>(null);
+
+  // Track scroll progress for only this paragraph
+  const { scrollYProgress } = useScroll({
+    target: textRef,
+    offset: ["start 90%", "end 40%"], // animation starts when enters, ends when leaving
+  });
+
+  // Paragraph text
+  const heroText =
+    "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold ideas converge to shape the future, brought to you by the Entrepreneurship Cell, IIT (BHU).";
+
+  const words = heroText.split(" "); // split by character
   return (
     <section
       className="relative w-full py-20 px-4 flex justify-center items-center"
@@ -30,7 +43,13 @@ const About = () => {
 
         <div className="text-center space-y-8">
           <h3
-            className="text-3xl md:text-5xl font-extrabold tracking-tight"
+            // className="text-3xl md:text-5xl font-extrabold tracking-tight"
+            className="
+    text-3xl 
+    sm:text-4xl 
+    md:text-5xl 
+    font-extrabold 
+    tracking-tight"
             style={{
               background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
               WebkitBackgroundClip: "text",
@@ -41,24 +60,58 @@ const About = () => {
           </h3>
 
           <div className="space-y-6 text-gray-200 leading-relaxed font-light">
-            <h1 className="text-xl md:text-2xl font-medium text-white/90">
-              E-Summit is an electrifying celebration of innovation and
-              entrepreneurship, brought to you by the Entrepreneurship Cell (E-Cell) at the Indian Institute of Technology (IIT) BHU.
-            </h1>
+            <motion.p
+            ref={textRef}
+            className="
+              text-xl sm:text-2xl md:text-3xl lg:text-4xl
+              font-medium leading-relaxed
+              flex flex-wrap justify-center
+            "
+          >
+            {words.map((word, index) => {
+              const start = index / words.length;
+              const end = start + 1 / words.length;
 
-            <p className="text-base md:text-lg opacity-80 max-w-3xl mx-auto">
-              This annual festival is a convergence of visionary thinkers,
-              budding entrepreneurs, and established industry leaders, all
-              united by a common passion:{" "}
+              const color = useTransform(
+                scrollYProgress,
+                [start, end],
+                ["#9CA3AF", "#FFFFFF"]
+              );
+
+              return (
+                <React.Fragment key={index}>
+                <motion.span
+                  style={{ color }}
+                  className="inline-block"
+                >
+                  {word}
+                </motion.span>
+                <span>&nbsp;</span>
+    </React.Fragment>
+              );
+            })}
+          </motion.p>
+            {/* <p className="text-base md:text-lg opacity-80 max-w-3xl mx-auto"> */}
+            <p className="
+  text-sm 
+  sm:text-base 
+  md:text-lg 
+  lg:text-xl 
+  leading-relaxed 
+  opacity-80 
+  max-w-3xl 
+  mx-auto
+">
+
+              
               <span className="text-yellow-400 font-normal">
                 &quot;The drive to create, innovate and transform the future.&quot;
               </span>
             </p>
 
             <p className="text-base md:text-lg opacity-80 max-w-3xl mx-auto">
-              E-Summit is where dreams are nurtured, ideas are cultivated, and
-              future entrepreneurs are born. Join us in this exhilarating journey
-              of entrepreneurship, and together let&apos;s write the future!
+              E-Summit is where ideas are nurtured, ambitions take form, and the
+              next generation of entrepreneurs begins its journey.
             </p>
           </div>
         </div>

@@ -54,6 +54,8 @@ const Hero: FunctionComponent = () => {
       {/* Ambient Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
+      <ScrollTicket />
+
       <motion.div
         style={{ scale, opacity }}
         initial={{ opacity: 0, y: 20 }}
@@ -74,6 +76,7 @@ const Hero: FunctionComponent = () => {
         {/* Gradient Heading */}
         <h2
           className="text-xl md:text-2xl font-mono tracking-widest uppercase"
+          
           style={{
             background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
             WebkitBackgroundClip: "text",
@@ -101,7 +104,9 @@ const Hero: FunctionComponent = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          className="mt-2 text-gray-200 max-w-sm sm:max-w-md md:max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed hidden md:block text-shadow-sm"
+          // className="mt-2 text-gray-200 max-w-sm sm:max-w-md md:max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed hidden md:block text-shadow-sm"
+          className="mt-2 text-gray-200 max-w-sm sm:max-w-md md:max-w-2xl text-sm sm:text-base md:text-xl md:leading-loose md:font-normal font-light hidden md:block text-shadow-sm"
+
         >
           Are you one of those people working day and night on that one startup
           idea? Are you the one who wants to explore the world of

@@ -49,7 +49,7 @@ const SpeakerCard: FunctionComponent<Props> = (props: OwnProps) => {
       <div className="p-6 text-center">
         <h4
           className="
-            mb-2 font-semibold text-lg 
+            mb-2 font-semibold text-2xl
             bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA]
             bg-clip-text text-transparent tracking-wide drop-shadow-[0_0_6px_rgba(35,192,173,0.3)]
           "

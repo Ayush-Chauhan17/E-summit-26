@@ -52,7 +52,7 @@ export default function FAQ() {
       
       {/* Header with gradient text */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
           Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Questions</span>
         </h2>
         <div className="h-1 w-20 bg-teal-500 mx-auto rounded-full"></div>
@@ -76,14 +76,14 @@ export default function FAQ() {
               >
                 <AccordionTrigger 
                   className="
-                    px-6 py-4 text-left text-lg font-medium text-gray-100 
-                    hover:no-underline hover:text-blue-400 transition-colors
-                    [&[data-state=open]]:text-blue-400
+                    px-6 py-4 text-left text-lg sm:text-xl md:text-2xl font-medium text-gray-100 
+                    hover:no-underline hover:text-cyan-400 transition-colors
+                    [&[data-state=open]]:text-cyan-400
                   "
                 >
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 text-gray-300 leading-relaxed font-light text-base">
+                <AccordionContent className="px-6 pb-6 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed font-light border-l-2 border-cyan-400  ml-6 pl-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

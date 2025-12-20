@@ -1,0 +1,61 @@
+.ticket-fixed {
+  position: fixed;
+  top: 50%;
+  right: -15px; /* half outside screen */
+  transform: translateY(-50%);
+  height: 90px;
+  /* collapsed width */
+  cursor: pointer;
+  width: 80px;
+
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: center;
+  z-index: 100;
+  background: linear-gradient(90deg, #487afa, #23c0ad, #f1e821);
+  border-radius: 7px 0 0 7px;
+  overflow: hidden;
+
+  transition:
+    width 0.5s ease,
+    right 0.5s ease;
+}
+
+/* expanded state */
+.ticket-active,
+.ticket-fixed:hover {
+  width: 110px;
+
+  right: 0; /* fully visible */
+}
+
+/* icon rotation */
+.rotate_by_90 {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+/* text opacity */
+.ticket-text {
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ticket-active .ticket-text,
+.ticket-fixed:hover .ticket-text {
+  opacity: 1;
+}
+
+.rotate_text {
+  transform: rotate(-90deg);
+  font-size: 18px;
+  margin-left: -20px;
+}
+
+@media (min-width: 800px) {
+  .ticket-fixed {
+    width: 100px;
+  }
+}
