@@ -1,0 +1,84 @@
+.pass-card-wrapper {
+  padding: 1px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #487afa, #23c0ad, #f1e821);
+}
+
+.pass-card {
+  width: 320px;
+  padding: 24px;
+  border-radius: 19px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+.pass-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-decoration: underline;
+}
+
+/* Price */
+.pass-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.original-price {
+  font-size: 18px;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.final-price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #facc15;
+}
+
+/* Features */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.icon.available {
+  background-color: #facc15;
+}
+
+.icon.unavailable {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.feature-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Button */

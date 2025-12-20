@@ -1,0 +1,29 @@
+.diamond {
+  background: linear-gradient(
+    135deg,
+    /* diagonal sparkle effect */ #e0e0e0,
+    /* light gray / silver */ #ffffff,
+    /* pure white shine */ #c0d6e4,
+    /* subtle blue hint */ #ffffff /* white highlight */
+  );
+}
+
+.silver {
+  background: linear-gradient(
+    135deg,
+    /* diagonal for shine effect */ #d4d4d4,
+    /* dark silver */ #f0f0f0,
+    /* light silver */ #ffffff,
+    /* bright shine */ #f0f0f0,
+    /* light silver again */ #d4d4d4 /* dark silver */
+  );
+}
+
+.gold {
+  background: linear-gradient(
+    90deg,
+    #ffd700,
+    /* dark gold */ #ffdd44,
+    /* medium gold */ #ffec99 /* light gold */
+  );
+}
