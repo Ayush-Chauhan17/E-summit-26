@@ -1,9 +1,5 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
-
-// Custom Palette
-// Yellow: #F1E821  |  Teal: #23C0AD  |  Blue: #487AFA
-
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>

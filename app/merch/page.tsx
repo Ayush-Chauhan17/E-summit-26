@@ -22,7 +22,7 @@ export default function CardWithForm() {
       <div className="flex flex-col items-center justify-center w-full min-h-screen">
         <div className="mt-0 mb-0 text-center">
           <p
-            className="font-bold text-3xl inline-block"
+            className="font-bold text-3xl sm:text-4xl md:text-5xl inline-block"
             style={{
               background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
               WebkitBackgroundClip: "text",
@@ -83,7 +83,7 @@ export default function CardWithForm() {
           passHref
         >
           <Button
-            className="mt-5"
+            className="mt-6 text-sm sm:text-base md:text-lg lg:text-xl px-6 py-3 font-semibold"
             variant={"default"}
             style={{
               background: "linear-gradient(120deg, #F1E821, #23C0AD,#487AFA )",

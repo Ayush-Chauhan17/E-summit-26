@@ -74,10 +74,10 @@ const StatItem: FunctionComponent<Stat & { isFirstItem: boolean }> = ({
         className="flex justify-center items-center gap-1"
         whileHover={{ scale: 1.1 }}
       >
-        <motion.h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-yellow-600 drop-shadow-sm">
+        <motion.h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-300 to-blue-600 drop-shadow-sm">
           {rounded}
         </motion.h2>
-        <span className="text-2xl sm:text-3xl font-semibold text-yellow-500">
+        <span className="text-2xl sm:text-3xl font-semibold text-teal-500">
           +
         </span>
       </motion.div>
@@ -105,10 +105,10 @@ const Stats: FunctionComponent = () => {
     <section className="relative w-full px-4 md:px-10 py-16 overflow-hidden z-10">
       
       {/* Background Glow for Stats */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-32 bg-yellow-500/10 blur-[80px] -z-10 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-32 bg-blue-300/10 blur-[80px] -z-10 pointer-events-none" />
 
-      <h1 className="text-2xl md:text-4xl font-bold text-center mb-10 text-white tracking-wide">
-        Key Event <span className="text-yellow-400">Statistics</span>
+      <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-10 text-white tracking-wide">
+        Key Event <span className="text-teal-400">Statistics</span>
       </h1>
 
       <Tilt options={defaultOptions} className="w-full max-w-6xl mx-auto">

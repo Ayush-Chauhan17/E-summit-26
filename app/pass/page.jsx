@@ -12,7 +12,7 @@ export default function PassPage() {
         <Particle />
       </div>
 
-      <div className="pass-container gap-10 justify-center mt-20 mb-10 ">
+      <div className="pass-container gap-10 justify-center mb-10 ">
         <PassCard
           title="Silver Pass"
           originalPrice={799}

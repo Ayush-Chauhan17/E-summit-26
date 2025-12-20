@@ -27,7 +27,7 @@ const ResponsiveComponent = () => {
     {
       name: "Swati",
       description: "UI/UX Designer",
-      post: "The event was well-organized, and the energy throughout the summit was amazing. I especially enjoyed the pitch competition—it was both challenging and rewarding!",
+      post: "The event was well organized, and the energy throughout the summit was amazing. I especially enjoyed the pitch competition.It was both challenging and rewarding!",
     },
     {
       name: "Manoj",
@@ -61,7 +61,7 @@ const ResponsiveComponent = () => {
         >
           What Our Participants Say
         </h2>
-        <p className="text-[#cfcfcf] mt-3 text-sm md:text-base">
+        <p className="text-[#cfcfcf] mt-3 text-sm sm:text-base md:text-lg lg:text-xl">
           Hear directly from the attendees about their experiences at the summit.
         </p>
       </div>

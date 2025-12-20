@@ -52,10 +52,10 @@ export default function FAQ() {
       
       {/* Header with gradient text */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
-          Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Questions</span>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
+          Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Questions</span>
         </h2>
-        <div className="h-1 w-20 bg-yellow-500 mx-auto rounded-full"></div>
+        <div className="h-1 w-20 bg-teal-500 mx-auto rounded-full"></div>
       </div>
 
       <div className="w-full max-w-[850px] relative z-10">
@@ -71,19 +71,19 @@ export default function FAQ() {
                   bg-white/5 backdrop-blur-md border border-white/10
                   transition-all duration-300 ease-in-out
                   hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)]
-                  data-[state=open]:bg-white/10 data-[state=open]:border-yellow-500/30
+                  data-[state=open]:bg-white/10 data-[state=open]:border-blue-500/30
                 "
               >
                 <AccordionTrigger 
                   className="
-                    px-6 py-4 text-left text-lg font-medium text-gray-100 
-                    hover:no-underline hover:text-yellow-400 transition-colors
-                    [&[data-state=open]]:text-yellow-400
+                    px-6 py-4 text-left text-lg sm:text-xl md:text-2xl font-medium text-gray-100 
+                    hover:no-underline hover:text-cyan-400 transition-colors
+                    [&[data-state=open]]:text-cyan-400
                   "
                 >
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 text-gray-300 leading-relaxed font-light text-base">
+                <AccordionContent className="px-6 pb-6 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed font-light border-l-2 border-cyan-400  ml-6 pl-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

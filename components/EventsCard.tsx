@@ -15,7 +15,6 @@ const EventsCard = (props: EventProps) => {
   const [isModal, setIsModal] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // close when clicking outside
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
@@ -75,7 +74,7 @@ const EventsCard = (props: EventProps) => {
             </div>
           </motion.div>
 
-          <h1 className="text-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 mt-5 tracking-wide drop-shadow-sm">
+          <h1 className="text-center font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-blue-500 mt-5 tracking-wide drop-shadow-sm">
             {props.title}
           </h1>
 
@@ -86,7 +85,7 @@ const EventsCard = (props: EventProps) => {
           <div className="flex justify-center mt-2 relative z-10">
             <button
               onClick={() => setIsModal(true)}
-              className="text-xs text-yellow-400/80 hover:text-yellow-300 uppercase tracking-widest font-semibold transition-colors duration-300"
+              className="text-xs text-teal-400/80 hover:text-blue-300 uppercase tracking-widest font-semibold transition-colors duration-300"
             >
               Read more
             </button>
@@ -102,17 +101,18 @@ const EventsCard = (props: EventProps) => {
               className="w-full"
             >
               <Button
-                className="
-                  w-full bg-gradient-to-r from-yellow-500 to-yellow-600 
-                  text-black font-bold tracking-wider border-0
-                  hover:from-yellow-400 hover:to-yellow-500 
-                  shadow-[0_0_20px_rgba(234,179,8,0.3)]
-                  hover:shadow-[0_0_30px_rgba(234,179,8,0.5)]
-                  rounded-xl py-6 transition-all duration-300
-                "
-              >
-                REGISTER
-              </Button>
+              className="
+               w-full bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA]
+                text-black font-bold tracking-wider border-0
+              hover:from-[#F1E821]/90 hover:via-[#23C0AD]/90 hover:to-[#487AFA]/90
+              shadow-[0_0_20px_rgba(72,122,250,0.35)]
+              hover:shadow-[0_0_30px_rgba(72,122,250,0.55)]
+              rounded-xl py-6 transition-all duration-300
+              "
+            >
+            REGISTER
+            </Button>
+
             </motion.a>
           </div>
         </motion.div>
@@ -134,11 +134,11 @@ const EventsCard = (props: EventProps) => {
               exit={{ scale: 0.8, y: 20, opacity: 0 }}
               transition={{ duration: 0.25 }}
               className="
-                bg-white/10 border border-yellow-400/30 backdrop-blur-xl
+                bg-white/10 border border-teal-400/30 backdrop-blur-xl
                 shadow-xl rounded-2xl p-6 max-w-lg w-full
               "
             >
-              <h2 className="text-center text-2xl font-bold text-yellow-300 drop-shadow mb-4">
+              <h2 className="text-center text-2xl font-bold text-teal-300 drop-shadow mb-4">
                 {props.title}
               </h2>
 
@@ -147,7 +147,7 @@ const EventsCard = (props: EventProps) => {
               </p>
 
               <a href={props.eventPage} target="_blank" rel="noreferrer">
-                <Button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold py-4 rounded-xl">
+                <Button className="w-full bg-gradient-to-r from-teal-500 to-blue-600 text-black font-bold py-4 rounded-xl">
                   REGISTER
                 </Button>
               </a>
