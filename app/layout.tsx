@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -10,53 +10,38 @@ import "./globals.css";
 import React from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Head from "next/head";
-// const inter = Inter({ subsets: ["latin"] });
-// import CustomCursor from "@/components/CustomCursor";
-
-export const metadata: Metadata = {
-  applicationName: "E-Summit'26 | IIT BHU Varanasi",
-  referrer: "origin-when-cross-origin",
-  title: {
-    default: "E-Summit'26 | IIT BHU Varanasi",
-    template: "%s | E-Summit'26 | IIT BHU Varanasi",
-  },
-  description: "E-Summit'26 | IIT BHU Varanasi",
-  category: "Technology and Entrepreneurship Summit",
-  keywords: [
-    "E-Summit",
-    "E-Summit'26",
-    "E-Summit'26 IIT BHU Varanasi",
-    "IIT BHU Varanasi",
-    "E-Summit IIT BHU Varanasi",
-    "E-Summit'26 IIT BHU",
-    "esummit 26",
-    "esummit",
-  ],
-};
+import AnimatedBackground from "@/components/AnimatedBackground";
+import TransitionBackground from "@/components/TransitionBackground";
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
         <link rel="icon" href="/E-Cell-White" media="(prefers-color-scheme: light)" />
       </head>
+   
       <body
         className={cn(
-          "min-h-screen bg-black  font-sans antialiased",
+          "min-h-screen font-sans antialiased relative",
           fontSans.variable,
         )}
       >
-        {/* <div className="flex items-center w-full min-h-screen flex-col"> */}
-          <Navbar />
-          {/*<ParallaxProvider>*/}
-          <main className="flex-1  ">{children}</main>
-          {/*</ParallaxProvider>*/}
-        {/* </div> */}
+        {/* Conditional Background based on route */}
+        <div className="fixed inset-0 -z-10">
+          {isHomePage ? <AnimatedBackground /> : <TransitionBackground />}
+        </div>
+
+        <Navbar />
+        <main className="flex-1 relative z-10">{children}</main>
         <Footer />
         <Toaster />
       </body>
