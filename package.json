@@ -30,7 +30,7 @@
     "@tsparticles/slim": "^3.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "framer-motion": "^10.16.16",
+    "framer-motion": "^10.18.0",
     "gsap": "^3.13.0",
     "lucide": "^0.294.0",
     "lucide-react": "^0.294.0",

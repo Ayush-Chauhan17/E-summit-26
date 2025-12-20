@@ -36,7 +36,7 @@ const page: FunctionComponent<Props> = () => {
         <div className="pt-24 w-full min-h-screen flex flex-col items-center">
           <div>
             <h1
-              className="text-6xl m-4 flex justify-center font-semibold sm:py-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-4 flex justify-center font-semibold sm:py-6"
               style={{
                 background: "linear-gradient(90deg, #6A23A6, #E91045)",
                 WebkitBackgroundClip: "text",
@@ -54,10 +54,10 @@ const page: FunctionComponent<Props> = () => {
               className="sm:w-[400px] md:w-[1200px] text-center"
             >
               <TabsList>
-                <TabsTrigger value="presentSpeaker">
+                <TabsTrigger value="presentSpeaker" className="text-sm sm:text-base md:text-lg lg:text-xl font-medium">
                   Present Speakers
                 </TabsTrigger>
-                <TabsTrigger value="pastSpeaker">
+                <TabsTrigger value="pastSpeaker" className="text-sm sm:text-base md:text-lg lg:text-xl font-medium">
                   Past Speakers
                 </TabsTrigger>
               </TabsList>
