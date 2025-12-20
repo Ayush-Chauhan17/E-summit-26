@@ -7,6 +7,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import InteractiveBackground from "@/components/InteractiveBackground";
 
 export default function CardWithForm() {
+  // return (
+  //   <div className="flex justify-center mt-44">
+  //     <h1 className="text-6xl m-4 flex justify-center font-semibold sm:py-6">
+  //       COMING&nbsp; SOON...
+  //     </h1>
+  //   </div>
+  // );
   return (
     <>
       {/* Interactive Background */}
@@ -28,10 +35,16 @@ export default function CardWithForm() {
 
         <hr />
 
+        <div className="flex justify-center mt-44">
+          <h1 className="text-6xl m-4 flex justify-center font-semibold sm:py-6">
+            COMING&nbsp; SOON...
+          </h1>
+        </div>
+
         {/* Cards Container */}
-        <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-8 mt-5 lg:mt-5">
-          {/* Card 1 */}
-          <Card className="w-[90%] sm:w-[48%] md:w-[45%] lg:w-[40%] xl:w-[35%] bg-transparent border border-black bg-white rounded-lg">
+        {/* <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-8 mt-5 lg:mt-5"> */}
+        {/* Card 1 */}
+        {/* <Card className="w-[90%] sm:w-[48%] md:w-[45%] lg:w-[40%] xl:w-[35%] bg-transparent border border-black bg-white rounded-lg">
             <CardContent>
               <div className="w-full h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden rounded-md">
                 <Image
@@ -44,10 +57,10 @@ export default function CardWithForm() {
                 />
               </div>
             </CardContent>
-          </Card>
+          </Card> */}
 
-          {/* Card 2 */}
-          <Card className="w-[90%] sm:w-[48%] md:w-[45%] lg:w-[40%] xl:w-[35%] bg-transparent border border-white bg-white rounded-lg">
+        {/* Card 2 */}
+        {/* <Card className="w-[90%] sm:w-[48%] md:w-[45%] lg:w-[40%] xl:w-[35%] bg-transparent border border-white bg-white rounded-lg">
             <CardContent>
               <div className="w-full h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden rounded-md">
                 <Image
@@ -60,11 +73,11 @@ export default function CardWithForm() {
                 />
               </div>
             </CardContent>
-          </Card>
-        </div>
+          </Card> */}
+        {/* </div> */}
 
         {/* Button for redirecting to Google Forms */}
-        <Link
+        {/* <Link
           href="https://forms.gle/ybXS7KoaHxqDSkH79"
           target="_blank"
           passHref
@@ -73,8 +86,7 @@ export default function CardWithForm() {
             className="mt-6 text-sm sm:text-base md:text-lg lg:text-xl px-6 py-3 font-semibold"
             variant={"default"}
             style={{
-              background:
-                "linear-gradient(120deg, #F1E821, #23C0AD,#487AFA )",
+              background: "linear-gradient(120deg, #F1E821, #23C0AD,#487AFA )",
               color: "white",
               border: "none",
               padding: "0.5rem 1.5rem",
@@ -86,7 +98,7 @@ export default function CardWithForm() {
           >
             Buy Merch
           </Button>
-        </Link>
+        </Link> */}
       </div>
     </>
   );

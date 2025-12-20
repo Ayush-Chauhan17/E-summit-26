@@ -1,7 +1,7 @@
 "use client";
 import React, { FunctionComponent, useState } from "react";
 import { useSearchParams } from "next/navigation";
-
+import TicketCard from "./TicketCard";
 interface OwnProps {}
 
 type Props = OwnProps;
@@ -53,15 +53,98 @@ const Page: FunctionComponent<Props> = (props) => {
           </label>
         </div>
         {type === "esummit" && (
-          <iframe
-            id="ts-iframe"
-            src="https://www.townscript.com/v2/widget/esummit-2026-iitbhu-103000/booking"
-            height="600"
-            width="80%"
-          ></iframe>
+          <>
+            <iframe
+              id="ts-iframe"
+              src="https://www.townscript.com/v2/widget/esummit-2026-iitbhu-103000/booking"
+              height="600"
+              width="80%"
+            ></iframe>
+            <div className="flex flex-col mt-10 gap-10">
+              <div className="flex gap-10">
+                <TicketCard
+                  title="E Summit'26 - Silver Pass"
+                  info_div_classes="silver"
+                  features={[
+                    "Hospitality Kit",
+                    "Keynote Speaker Session",
+                    "Fireside Chat with Founders",
+                    "Networking at Startup Expo",
+                    "Events and competitions",
+                    "Access to Panel Discussions",
+                  ]}
+                />
+                <TicketCard
+                  title="E Summit'26 - Gold Pass"
+                  info_div_classes="gold"
+                  features={[
+                    "Hospitality Kit",
+                    "Keynote Speaker Session",
+                    "Fireside Chat with Founders",
+                    "Networking at Startup Expo",
+                    "Events and competitions",
+                    "Access to Panel Discussions",
+                  ]}
+                />
+              </div>
+
+              <div className="mx-auto">
+                <TicketCard
+                  title="E Summit'26 - Diamond Pass"
+                  info_div_classes="diamond"
+                  features={[
+                    "Hospitality Kit",
+                    "Keynote Speaker Session",
+                    "Fireside Chat with Founders",
+                    "Networking at Startup Expo",
+                    "Events and competitions",
+                    "Access to Panel Discussions",
+                  ]}
+                />
+              </div>
+            </div>
+          </>
         )}
         {type === "startup_junction" && <StartupJunctionForm />}
       </div>
+      {/* <div className="flex gap-6">
+        <TicketCard
+          title="E Summit'26 - Silver Pass"
+          info_div_classes="silver"
+          features={[
+            "Hospitality Kit",
+            "Keynote Speaker Session",
+            "Fireside Chat with Founders",
+            "Networking at Startup Expo",
+            "Events and competitions",
+            "Access to Panel Discussions",
+          ]}
+        />
+        <TicketCard
+          title="E Summit'26 - Diamond Pass"
+          info_div_classes="diamond"
+          features={[
+            "Hospitality Kit",
+            "Keynote Speaker Session",
+            "Fireside Chat with Founders",
+            "Networking at Startup Expo",
+            "Events and competitions",
+            "Access to Panel Discussions",
+          ]}
+        />
+        <TicketCard
+          title="E Summit'26 - Gold Pass"
+          info_div_classes="gold"
+          features={[
+            "Hospitality Kit",
+            "Keynote Speaker Session",
+            "Fireside Chat with Founders",
+            "Networking at Startup Expo",
+            "Events and competitions",
+            "Access to Panel Discussions",
+          ]}
+        />
+      </div> */}
     </section>
   );
 };

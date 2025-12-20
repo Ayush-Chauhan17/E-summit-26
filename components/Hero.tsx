@@ -8,6 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ScrollTicket from "./ui/ScrollTicket.jsx";
 
 const Hero: FunctionComponent = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -46,6 +47,8 @@ const Hero: FunctionComponent = () => {
 
       {/* Ambient Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
+
+      <ScrollTicket />
 
       <motion.div
         style={{ scale, opacity }}
@@ -95,8 +98,9 @@ const Hero: FunctionComponent = () => {
 
         >
           Are you one of those people working day and night on that one startup
-          idea? Are you the one who wants to explore the world of entrepreneurship?
-          You&apos;ve arrived at the proper location. You are wanted by us!
+          idea? Are you the one who wants to explore the world of
+          entrepreneurship? You&apos;ve arrived at the proper location. You are
+          wanted by us!
         </motion.p>
 
         {/* Buttons */}
@@ -106,7 +110,11 @@ const Hero: FunctionComponent = () => {
           animate="visible"
         >
           {/* E-Summit Button */}
-          <motion.div custom={0} variants={buttonVariants} className="w-full sm:w-auto relative">
+          <motion.div
+            custom={0}
+            variants={buttonVariants}
+            className="w-full sm:w-auto relative"
+          >
             <Link href="/payment?type=esummit">
               <button
                 className="
@@ -133,7 +141,11 @@ const Hero: FunctionComponent = () => {
           </motion.div>
 
           {/* Startup Expo Button */}
-          <motion.div custom={1} variants={buttonVariants} className="w-full sm:w-auto relative">
+          <motion.div
+            custom={1}
+            variants={buttonVariants}
+            className="w-full sm:w-auto relative"
+          >
             <Link href="/payment?type=StartupExpo">
               <button
                 className="
@@ -147,8 +159,8 @@ const Hero: FunctionComponent = () => {
                 <span className="relative z-10 text-sm md:text-base pointer-events-none text-[#23C0AD] group-hover:text-white transition-colors">
                   Startup Expo
                 </span>
-                 {/* Reusing arrow or different icon logic here */}
-                 <div className="w-6 h-6 bg-[#23C0AD] rounded-full group-hover:bg-white transition-colors"></div>
+                {/* Reusing arrow or different icon logic here */}
+                <div className="w-6 h-6 bg-[#23C0AD] rounded-full group-hover:bg-white transition-colors"></div>
               </button>
             </Link>
           </motion.div>
