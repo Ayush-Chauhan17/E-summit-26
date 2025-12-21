@@ -19,7 +19,7 @@ export const startupEvents = [
   {
     title: "Million Dollar Pitch",
     description:
-      " Million Dollar Pitch is a gateway for startups to secure the funding they deserve. With a rigorous 3-round screening process, it culminates in a Demo Day where the top teams showcase their visionary ideas to a distinguished panel of VCs and Angel Investors.",
+      " From rigorous screening to Demo Day—Million Dollar Pitch connects standout startups with serious investors.",
     imageUrl: "/images/MDPillu.png",
     isOdd: false,
     eventPage:
@@ -28,7 +28,7 @@ export const startupEvents = [
   {
     title: "The Founder's Gambit",
     description:
-      " Founder’s Gambit will help you experience the hurdles faced by Startup founders in their career while you take decisions which can decide the course and future of your Startup. Participants will navigate a simulated startup journey, solving problems across eight stages of a startup’s lifecycle.",
+      "A decision-driven startup simulation where every choice shapes your venture’s future.",
     imageUrl: "/images/tfgIllus.png",
     isOdd: false,
     eventPage:
@@ -48,7 +48,7 @@ export const stategyEvents = [
   {
     title: "Case X",
     description:
-      "CaseX is a dynamic case study competition challenging teams to tackle real-world startup issues. The participants dive into the entrepreneurial world as they receive a problem statement and craft innovative strategies and solutions.",
+      "A fast-paced case study where teams solve real startup challenges with bold ideas.",
     imageUrl: "/images/casexIllustration.png",
     isOdd: false,
     eventPage: "https://unstop.com/o/wVsmRrg?lb=orhiPzt&utm_medium=Share&utm_source=eventcel20660&utm_campaign=Competitions",
@@ -56,7 +56,7 @@ export const stategyEvents = [
   {
     title: "Innovation Crucible",
     description:
-      "Innovation Crucible is a high-rigour technology commercialization challenge designed to build the next generation of innovation evaluators, IP strategists and deep-tech founders. It brings together analytical thinking, real-world technical assessment and strategic decision-making, all within a dynamic, competitive format. Participants not only learn how to assess technologies like professionals at a TTO or VC fund, but also get the opportunity to pitch to industry experts and investors at the grand finale in IIT BHU.",
+      "A competitive deep-tech challenge blending technology evaluation, IP strategy, and high-stakes pitching.",
     imageUrl: "/images/innCrucible.png",
     isOdd: false,
     eventPage: "https://unstop.com/competitions/innovation-crucible-e-summit26-iit-bhu-varanasi-iit-bhu-1603920",
@@ -64,7 +64,7 @@ export const stategyEvents = [
   {
     title: "Design Rush",
     description:
-      "Design Rush is the ultimate UI/UX competition, where teams take on real challenges provided by startups. The participants craft wireframes, prototypes, and dynamic solutions as they get to showcase their design prowess and help startups navigate the digital landscape in this thrilling competition.",
+      "A fast-paced UI/UX competition turning real startup challenges into powerful digital experiences.",
     imageUrl: "/images/design-rushIllus.png",
     isOdd: false,
     eventPage:
@@ -73,7 +73,7 @@ export const stategyEvents = [
   {
     title: "Venture Verse",
     description:
-      "Venture Verse is a thrilling competition that puts you in the shoes of a VC associate. Participants dive into the world of venture capital as they analyse startups and assess their investment potential. Discover the next big thing and sharpen your skills in this high-stakes VC competition.",
+      "A high-stakes VC challenge where participants evaluate startups and make investment decisions.",
     imageUrl: "/images/venture-verseILLU.png",
     isOdd: false,
     eventPage:
@@ -82,7 +82,7 @@ export const stategyEvents = [
   {
     title: "AdVenture",
     description:
-      "AdVenture: The Branding Challenge is a one-of-a-kind event which gives you the opportunity to showcase your innovative ideas, out-of-the-box strategies, and unique approach to marketing in a competitive yet collaborative environment.",
+      "A competitive branding challenge built on creativity and strategic marketing.",
     imageUrl: "/images/AdventureIllus.png",
     isOdd: false,
     eventPage:
@@ -91,7 +91,7 @@ export const stategyEvents = [
   {
     title: "Fusion Forge",
     description:
-      "Every team will have to think of a hybrid product and propose a 2-slide plan for their product, including their purpose, price, promotion(tagline, product name, etc), and target audience.",
+      "Teams must design a hybrid product and present a concise 2-slide plan covering purpose, pricing, promotion, and target audience.",
     imageUrl: "/images/fusionforgeIllus.png",
     isOdd: false,
     eventPage:
@@ -100,7 +100,7 @@ export const stategyEvents = [
   {
     title: "Verdict Arena",
     description:
-      "The Verdict Arena merges entrepreneurship, global laws, and strategic reasoning. Participants step into the shoes of founders navigating complex international legal systems — learning how regulations can both empower and challenge startups. Through multiple rounds, they will test their business intellect, legal awareness, and persuasive skills in real-world startup scenarios.",
+      "A high-stakes challenge where startups meet global law and strategy.",
     imageUrl: "/images/the-verdict-arenaILLU.png",
     isOdd: false,
     eventPage:
@@ -111,7 +111,7 @@ export const funEvents = [
   {
     title: "Tesseract",
     description:
-      "Tesseract, a captivating treasure hunt, is a highlight of E-Summit '23. Join us on an exhilarating adventure where innovation and entrepreneurship intersect with clues and challenges. Uncover hidden gems, forge connections, and experience the heart of entrepreneurial exploration at this year's E-Summit.",
+      "An adrenaline-packed treasure hunt blending clues, innovation, and entrepreneurial spirit.",
     imageUrl: "/images/TesseractIllu.png",
     isOdd: false,
     eventPage:
@@ -129,7 +129,7 @@ export const funEvents = [
     {
     title: "ShipWreck",
     description:
-      "Shipwreck is a fast-paced showdown where participants step into the shoes of CEOs, entrepreneurs, and startup prodigies to talk, think, and strategize their way to the top. Five contestants battle through sharp arguments, clever pitches, and persuasive answers to impress the Captain and survive each round. Drama, wit, and innovation collide—only one visionary will rise as the ultimate winner.",
+      "A rapid-fire battle of pitches, persuasion, and strategy—only one visionary survives.",
     imageUrl: "/images/shipwreckIllus.png",
     isOdd: false,
     eventPage:
