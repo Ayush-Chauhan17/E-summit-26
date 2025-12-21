@@ -9,7 +9,7 @@ export default function PassPage() {
   return (
     <div>
       <div className="absolute inset-0 -z-10">
-        <Particle />
+  
       </div>
 
       <div className="pass-container gap-10 justify-center mb-10 ">
