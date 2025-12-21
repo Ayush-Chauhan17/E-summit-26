@@ -28,7 +28,7 @@
 // //         <link rel="icon" href="/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
 // //         <link rel="icon" href="/E-Cell-White" media="(prefers-color-scheme: light)" />
 // //       </head>
-   
+
 // //       <body
 // //         className={cn(
 // //           "min-h-screen font-sans antialiased relative",
@@ -94,21 +94,20 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import React from "react";
 import BackgroundWrapper from "./BackgroundWrapper";
+import ScrollTicket from "@/components/ui/ScrollTicket";
 
-export function ClientLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body
         className={cn(
           "min-h-screen font-sans antialiased relative",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <BackgroundWrapper />
+        <ScrollTicket/>
+
         <Navbar />
         <main className="flex-1 relative z-10">{children}</main>
         <Footer />

@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
+
 interface SlideData {
   name?: string;
   post?: string;
@@ -89,6 +90,8 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
                 <h3 className="text-[#F1E821] font-semibold text-lg">{slide.name}</h3>
                 <p className="text-white text-sm text-center">{slide.description}</p>
               </div>
+             
+
             </SwiperSlide>
           ))}
         </Swiper>

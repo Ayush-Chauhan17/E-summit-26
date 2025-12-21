@@ -35,17 +35,17 @@ const page: FunctionComponent<Props> = () => {
       <section>
         <div className="pt-24 w-full min-h-screen flex flex-col items-center">
           <div>
+            
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-4 flex justify-center font-semibold sm:py-6"
-              style={{
-                background: "linear-gradient(90deg, #6A23A6, #E91045)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                display: "inline-block",
-              }}
-            >
-              Speakers
-            </h1>
+            className="font-bold text-3xl sm:text-4xl md:text-5xl inline-block pt-20 pb-14"
+            style={{
+              background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Speakers
+          </h1>
           </div>
 
           <div className="flex justify-center">

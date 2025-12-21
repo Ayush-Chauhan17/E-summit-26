@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import CustomSlider from "./CustomSlider";
 import AlternativeComponent from "./AltComp";
 
+
 const ResponsiveComponent = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -15,31 +16,32 @@ const ResponsiveComponent = () => {
   }, []);
 
   const slidesData = [
-    {
-      name: "Shivam",
-      description: "Frontend Developer",
-      post: "The summit was incredibly inspiring! The keynote sessions were thought-provoking, and the networking opportunities were top-notch. It gave me a fresh perspective on entrepreneurship.",
-    },
-    {
-      name: "Ramesh",
-      description: "Graphic Designer",
-      post: "I loved the mix of workshops and speaker sessions. The practical insights shared by industry experts were extremely helpful for my startup journey.",
-    },
-    {
-      name: "Swati",
-      description: "UI/UX Designer",
-      post: "The event was well organized, and the energy throughout the summit was amazing. I especially enjoyed the pitch competition.It was both challenging and rewarding!",
-    },
-    {
-      name: "Manoj",
-      description: "College Fresher",
-      post: "As a first-time attendee, I appreciated how approachable the speakers were. The panel discussions on funding and scaling startups were particularly useful.",
-    },
-    {
-      name: "Aryan",
-      description: "Aspiring Product Manager",
-      post: "The diversity of topics covered in the summit was impressive. From technology trends to leadership skills, every session added value to my entrepreneurial knowledge.",
-    },
+{
+  name: "Shivam",
+  description: "Frontend Developer",
+  post: "The summit was incredibly inspiring! The keynote sessions were thought-provoking, and the networking felt top-notch. It gave me a fresh, motivating perspective on entrepreneurship and helped me connect with amazing people."
+},
+{
+  name: "Ramesh",
+  description: "Graphic Designer",
+  post: "I loved the great mix of workshops and speaker sessions. The insights shared by experienced mentors were extremely practical, and each interaction felt valuable for my startup journey. The event truly exceeded expectations in every possible way."
+},
+{
+  name: "Swati",
+  description: "UI/UX Designer",
+  post: "The event was well-organized, and the energy throughout the summit was amazing. I especially enjoyed the pitch competition sessions. They were exciting, challenging, and incredibly rewarding, making the whole experience memorable."
+},
+{
+  name: "Manoj",
+  description: "College Fresher",
+  post: "As a first-time attendee, I appreciated how approachable all the speakers were. The panel discussions on funding and scaling startups offered meaningful direction and clarity. It was eye-opening, motivating, and very enjoyable."
+},
+{
+  name: "Aryan",
+  description: "Aspiring Product Manager",
+  post: "The vast diversity of topics covered during the summit was genuinely impressive. From technology trends to leadership skills, every session added real value to my knowledge. The event was vibrant, insightful, and highly engaging in every sense."
+}
+
   ];
 
   return (
@@ -98,5 +100,6 @@ const ResponsiveComponent = () => {
     </section>
   );
 };
+
 
 export default ResponsiveComponent;

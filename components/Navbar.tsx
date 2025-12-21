@@ -7,7 +7,7 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/public/logos/E-Cell-White[1].png";
+import logo from "@/public/logos/esummit26.png";
 
 import {
   DropdownMenu,
@@ -94,38 +94,35 @@ const Navbar: FunctionComponent = () => {
           {/* subtle inner ring */}
           <div className="pointer-events-none absolute inset-0 rounded-[999px] ring-1 ring-white/5" />
 
-          <div className="relative px-4 md:px-6 py-2.5">
+          <div className="relative px- md:px-6 py-0">
             <div className="flex items-center justify-between gap-4">
               {/* Left: logo + brand text (like Apple wordmark) */}
-              <Link
-                href="/"
-                className="flex items-center gap-2 shrink-0 group"
-              >
+              <Link href="/" className="flex items-center gap-0 shrink-0 group">
                 <Image
                   unoptimized
                   src={logo}
                   alt="E-Summit Logo"
-                  width={32}
-                  height={16}
+                  width={170}
+                  height={96}
                   className={`
                     object-contain transition-transform duration-300
                     ${scrolling ? "scale-[0.9]" : "scale-100"}
                   `}
                 />
-                <span
+                {/* <span
                   className={`
-                    hidden sm:inline-block text-[12px] tracking-[0.18em]
+                    hidden sm:inline-block text-[15px] tracking-[0.18em]
                     uppercase text-white/70 group-hover:text-white
                     transition-colors
                   `}
                 >
                   E‑Summit 26
-                </span>
+                </span> */}
               </Link>
 
               {/* ========== DESKTOP NAV (APPLE‑LIKE) ========== */}
               <div className="hidden lg:flex items-center justify-between flex-1">
-               <ul className="flex items-center gap-2 mx-auto text-[15px] font-semibold">
+                <ul className="flex items-center gap-12 mx-auto text-[15px] font-semibold">
                   {navItems.map((item) => {
                     const isActive = pathname === item.link;
                     return (
@@ -190,7 +187,10 @@ const Navbar: FunctionComponent = () => {
                         <DropdownMenuSeparator className="bg-white/15" />
 
                         {sjCities.map((city) => (
-                          <DropdownMenuItem key={city} className="cursor-pointer">
+                          <DropdownMenuItem
+                            key={city}
+                            className="cursor-pointer"
+                          >
                             <Link
                               href={`/SJ/${city}`}
                               className="flex w-full items-center justify-between text-sm"
@@ -215,7 +215,7 @@ const Navbar: FunctionComponent = () => {
                 <Link href="/payment?type=esummit">
                   <Button
                     className="
-                      rounded-full text-[13px] font-semibold text-white
+                      rounded-full text-[16px] font-bold text-white
                       px-4 py-1.5 h-auto
                       transition-transform duration-200
                       hover:scale-[1.04]
@@ -281,11 +281,7 @@ const Navbar: FunctionComponent = () => {
             border-b border-white/10
             shadow-[0_40px_80px_rgba(0,0,0,0.9)]
             transform transition-transform duration-300 ease-out
-            ${
-              isMobileMenuOpen
-                ? "translate-y-0"
-                : "-translate-y-[110%]"
-            }
+            ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-[110%]"}
           `}
         >
           {/* Title row inside sheet, like Apple “Store” label */}
@@ -293,9 +289,7 @@ const Navbar: FunctionComponent = () => {
             <span className="text-xs uppercase tracking-[0.18em] text-white/50">
               Menu
             </span>
-            <span className="text-[11px] text-white/40">
-              E‑Summit 26
-            </span>
+            <span className="text-[11px] text-white/40">E‑Summit 26</span>
           </div>
 
           <nav className="space-y-6">
@@ -315,9 +309,7 @@ const Navbar: FunctionComponent = () => {
                       `}
                     >
                       <span
-                        className={
-                          isActive ? "text-white" : "text-white/80"
-                        }
+                        className={isActive ? "text-white" : "text-white/80"}
                       >
                         {item.name}
                       </span>
@@ -349,7 +341,10 @@ const Navbar: FunctionComponent = () => {
                     <span>
                       SJ – {city.charAt(0).toUpperCase() + city.slice(1)}
                     </span>
-                    <ChevronDown size={14} className="rotate-[-90deg] text-white/40" />
+                    <ChevronDown
+                      size={14}
+                      className="rotate-[-90deg] text-white/40"
+                    />
                   </Link>
                 ))}
               </div>
