@@ -130,7 +130,7 @@ export const funEvents = [
     title: "ShipWreck",
     description:
       "A rapid-fire battle of pitches, persuasion, and strategy—only one visionary survives.",
-    imageUrl: "/images/shipwreckIllus.png",
+    imageUrl: "/images/7eventillustration.png",
     isOdd: false,
     eventPage:
       "https://unstop.com/events/shipwreck-e-summit26-iit-bhu-varanasi-iit-bhu-1592794?utm_medium=Share&utm_source=logged_out_user&utm_campaign=Cultural",
